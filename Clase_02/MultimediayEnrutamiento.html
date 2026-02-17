@@ -36,11 +36,79 @@
         </section>
             <h2>Ejemplos practicos</h2>
             <h3>A. Imagen con Texto Alternativo (SEO)</h3>
-            <p>Las imágenes deben llevar siempre el atributo <strong>alt</strong> para accesibilidad.</p>
+            <p>Las imágenes deben llevar siempre el atributo <strong>alt</strong> para accesibilidad.
+            El atributo alternativo
+            El atributo requerido proporciona un texto alternativo para una imagen, si el usuario para Alguna razón no puede verlo (por la conexión lenta, un error en el SRC o si el usuario usa un lector de pantalla).alt
+            El valor del atributo debe describir la imagen:alt</p>
+            <p>Si un navegador no puede encontrar una imagen, mostrará el valor del atributo:alt</p>
+            <h4>Tamaño de la imagen - Ancho y altura</h4>
+            <p>Puedes usar el atributo para especificar el ancho y altura de una imagen.style</p>
+            <p>style="width:500px;height:600px;" Los atributos y siempre definen el ancho y la altura de los atributos Imagen en píxeles.width height</p>
             <img src="https://picsum.photos/400/200" alt="Paisaje de ejemplo para clase de multimedia" title="Imagen aleatoria">
-
+            <h4>¿Anchura y altura, o estilo?</h4>
+            <p>Los atributos en el head son validos pero no son recomendables , , y son todo válido en HTML.widthheight style  Sin embargo, sugerimos usar ese atributo. Evita que las hojas de estilos cambien El tamaño de las imágenes:style </p>
+            <h4>Imágenes en otra carpeta</h4>
+            <p>si tienes tus imágenes en una subcarpeta, debes incluir la carpeta nombre en el atributo:src</p>
+            <p>img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;"></p>
+            <h4>Imágenes en otro servidor/sitio web</h4>
+            <p>lgunas páginas web apuntan a una imagen en otro servidor.Para apuntar a una imagen en otro servidor, debes especificar un absoluto (completo) URL en el atributo:src</p>
+            <p>img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"</p>
+            <h4>Imágenes animadas</h4>
+            <p> HTML permite GIFs animados:</p>
+            <p>img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;</p>
+            <h4>Imagen con enlace</h4>
+            <p>Imagen como enlace Para usar una imagen como enlace, coloca la etiqueta dentro de la etiqueta:<img><a></p>
+            <p>a href="default.asp"> img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">/a</p>
+            <h4>Imagen flotante</h4>
+            <p>Utiliza la propiedad CSS para que la imagen flote hacia la derecha o la izquierda de un texto:float</p>
+            <p>img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;"> The image will float to the right of the text.</p>
+            <p>img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">The image will float to the left of the text.</p>
+            <h4>Formatos de imagen comunes</h4>
+            <p>Aquí están los tipos de archivos de imagen más comunes, que se soportan en todos los navegadores (Chrome, Edge, Firefox, Safari, Opera):</p>
+            <table border="1" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <thead style="background-color: #e0e0e0;">
+            <tr>
+                <th style="padding: 12px; text-align: left;">Abreviación</th>
+                <th style="padding: 12px; text-align: left;">Formato de Archivo</th>
+                <th style="padding: 12px; text-align: left;">Extensiones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 10px;"><strong>APNG</strong></td>
+                <td style="padding: 10px;">Animated Portable Network Graphics</td>
+                <td style="padding: 10px;"><code>.apng</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><strong>GIF</strong></td>
+                <td style="padding: 10px;">Graphics Interchange Format</td>
+                <td style="padding: 10px;"><code>.gif</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><strong>ICO</strong></td>
+                <td style="padding: 10px;">Microsoft Icon</td>
+                <td style="padding: 10px;"><code>.ico, .cur</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><strong>JPEG</strong></td>
+                <td style="padding: 10px;">Joint Photographic Expert Group image</td>
+                <td style="padding: 10px;"><code>.jpg, .jpeg, .jfif, .pjpeg, .pjp</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><strong>PNG</strong></td>
+                <td style="padding: 10px;">Portable Network Graphics</td>
+                <td style="padding: 10px;"><code>.png</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><strong>SVG</strong></td>
+                <td style="padding: 10px;">Scalable Vector Graphics</td>
+                <td style="padding: 10px;"><code>.svg</code></td>
+            </tr>
+        </tbody>
+    </table>
             <h3>B. Reproductor de Audio Nativo</h3>
             <p>El atributo <em>controls</em> es vital para que el usuario pueda interactuar.</p>
+            
             <audio controls>
                 <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
                 Tu navegador no soporta el elemento de audio.
@@ -62,6 +130,7 @@
                 <li><strong>../</strong>: Salir a la carpeta superior (padre).</li>
             </ul>
         </section>
+
     </Main>
     <footer>
         <hr>
