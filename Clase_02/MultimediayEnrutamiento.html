@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <Meta charset="UTF-8">
+            <title>MultimediaYEnrutamiento</title>
+    </head>
+    <body>
+        <header><H1>Multimedia y Enrutamiento de Contenido</H1></header>
+    <Main>
+        <section>
+            <h2>Contenido Multimedia en Html</h2>
+            <p>HTML5 permite integrar medios visuales y auditivos de forma nativa sin usar plugins externos
+               a diferencia de sus anteriores versiones </p>
+               <table border="1">
+                <tr>
+                    <th>Etiqueta</th>
+                    <th>Descripcion</th>
+                    <th>Atributos Relevantes</th>
+                </tr>
+                <tr>
+                    <td>Img</td>
+                    <td>Inserta imagenes Es una etiqueta vacia (no tiene cierre)</td>
+                    <Td><strong>src:</strong></Td>ruta <strong>alt:</strong> texto alternativo.</td>
+                </tr>
+                <tr>
+                    <td>Audio</td>
+                    <td>Inserta audios Es una etiqueta vacia (no tiene cierre)</td>
+                    <td><strong>controls:</strong></td>Para el PLay y la pausa <strong>loop:</strong> repetir</tr>
+                </tr>
+                <tr>
+                    <td>Video</td>
+                    <td>Reproduce clips de video</td>
+                    <td><strong>width/height:</strong> tamaño, <strong>poster:</strong> imagen previa.</td>
+                </tr>
+               </table>
+        </section>
+            <h2>Ejemplos practicos</h2>
+            <h3>A. Imagen con Texto Alternativo (SEO)</h3>
+            <p>Las imágenes deben llevar siempre el atributo <strong>alt</strong> para accesibilidad.</p>
+            <img src="https://picsum.photos/400/200" alt="Paisaje de ejemplo para clase de multimedia" title="Imagen aleatoria">
+
+            <h3>B. Reproductor de Audio Nativo</h3>
+            <p>El atributo <em>controls</em> es vital para que el usuario pueda interactuar.</p>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+
+            <h3>C. Reproductor de Video con Portada (Poster)</h3>
+            <p>Usamos <em>poster</em> para mostrar una imagen antes de que el video inicie.</p>
+            <video controls width="100%" style="max-width:500px;" poster="https://via.placeholder.com/500x280?text=Haz+clic+para+ver+el+video">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </Section>
+        <hr>
+        <section>
+            <h2>Enrutamiento Relativo</h2>
+            <p>Para conectar esta pagina con la biografia, usamos rutas nativas</p>
+            <ul>
+                <li><strong>./</strong>: Misma carpeta</li>
+                <li><strong>../</strong>: Salir a la carpeta superior (padre).</li>
+            </ul>
+        </section>
+    </Main>
+    <footer>
+        <hr>
+        <nav>
+            <a href="../index.html">⬅️ Volver a la Biografía</a>
+        </nav>
+        <hr>
+        <section>
+            <h2>4. Documentación y Mentoría</h2>
+            <p>Este proyecto ha sido desarrollado siguiendo una metodología de aprendizaje activo, bajo los siguientes parámetros:</p>
+            
+            <ul>
+                <li><strong>Dirección del Proyecto:</strong> Steven (Estudiante de Programación).</li>
+                <li><strong>Mentoría y Tutoría:</strong> Gemini (IA de Google), proporcionando guía técnica en semántica HTML5 y resolución de errores de enrutamiento.</li>
+                <li><strong>Metodología:</strong> Codificación manual con depuración en tiempo real (Live Server) y control de versiones (Git).</li>
+            </ul>
+
+            <h3>Fuentes de consulta:</h3>
+            <ol>
+                <li>
+                    <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/video" target="_blank">MDN Web Docs - Elemento Video</a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/html/html5_multimedia.asp" target="_blank">W3Schools - HTML5 Multimedia</a>
+                </li>
+                <li>
+                    <a href="https://html.spec.whatwg.org/" target="_blank">HTML Living Standard - Documentación Oficial</a>
+                </li>
+            </ol>
+        </section>
+    </footer>
+    </body>
+</html>
