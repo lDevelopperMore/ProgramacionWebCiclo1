@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Arquitectura Semántica en HTML5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <main>
+        <header>
+            <p><a href="../index.html"> Indice de contenido</a></p>
+            <p><a href="./Clase_01Semana/index.html"> Semana 1: ¿Que es html? Versiones, Clases de etiquetas, Estructura
+                    base, Datos curiosos</a></p>
+            <p><a href="./Clase_01Semana/biografia.html"> Semana 1: Ejercicio practico hacer biografia</a></p>
+            <p><a href="./Clase_02Semana/index.html"> Semana 2: Tablas,listas</a></p>
+            <p><a href="./Clase_02Semana/MultimediayEnrutamiento.html"> Semana 2: Multimedia y Enrutamiento</a></p>
+            <p><a href="./Clase_02Semana/Biografia_Semana2.html"> Semana 2: Biografia aplicando Tablas, contenido
+                    multimedia y enrutamiento </a></p>
+            <p><a href="../Clase_03Semana/index.html"> Semana 3: Maquetación Semántica y Arquitectura de Enlaces en
+                    HTML5</a></p>
+            <p><a href="../Clase_03Semana/Biografia_Semana3.html"> Semana 3: Diseño de un sitio web </a></p>
+            <hr>
+        </header>
+        <section>
+            <h1>Arquitectura Semántica en HTML5</h1>
+            <h2>Concepto de Maquetación Semántica</h2>
+            <p>La maquetación semántica es la práctica de utilizar etiquetas HTML que describen su contenido y función
+                en el documento, permitiendo que navegadores, motores de búsqueda (SEO) y tecnologías de asistencia
+                (lectores de pantalla) comprendan la jerarquía y el propósito de cada sección de la página.</p>
+            <h2>Definición de Componentes Estructurales</h2>
+            <p>Etiqueta Header
+                Representa la cabecera de una página o de una sección específica. Se utiliza para agrupar elementos
+                introductorios como el logotipo del sitio, el título principal (h1), formularios de búsqueda o banners
+                destacados.
+
+                Etiqueta Nav
+                Define un bloque que contiene enlaces de navegación. Su propósito es agrupar los menús principales que
+                permiten al usuario moverse a través del sitio web o saltar a secciones dentro de la misma página.
+
+                Etiqueta Main
+                Es el contenedor del contenido central y único de la página. No debe incluir información que se repita
+                en otros documentos (como barras laterales o menús). Por estándar, solo debe existir un elemento main
+                visible por cada archivo HTML.
+
+                Etiqueta Section
+                Representa una agrupación temática de contenido. Se utiliza para dividir la página en capítulos,
+                pestañas o bloques lógicos. Cada sección debe tener idealmente un encabezado (h2-h6) que identifique su
+                tema.
+
+                Etiqueta Article
+                Define una composición autónoma e independiente. Un artículo debe tener sentido por sí mismo y ser
+                distribuible de forma aislada, como una entrada de blog, una noticia, un comentario de usuario o un
+                widget interactivo.
+
+                Etiqueta Aside
+                Se utiliza para contenido relacionado de forma tangencial o indirecta con el contenido principal. Es el
+                lugar adecuado para barras laterales, glosarios, publicidad, biografías cortas del autor o grupos de
+                enlaces relacionados.
+
+                Etiqueta Footer
+                Representa el pie de página o de una sección. Generalmente contiene información sobre el autor, datos de
+                copyright, enlaces a documentos legales, redes sociales y fechas de publicación.
+
+                Etiqueta Div
+                Es un contenedor genérico sin valor semántico. Se debe utilizar únicamente como último recurso cuando se
+                requiere agrupar elementos con el solo propósito de aplicar diseño o estilos mediante CSS, sin que dicha
+                agrupación tenga un significado lógico.</p>
+            <h2>Principios de Implementación</h2>
+            <p>Significado sobre Diseño: No elijas una etiqueta por cómo se ve en el navegador, sino por lo que
+                representa el contenido que lleva dentro.
+
+                Accesibilidad (A11y): El uso correcto de estas etiquetas permite que las personas con discapacidad
+                visual naveguen rápidamente entre regiones de la página.
+
+                Posicionamiento SEO: Los algoritmos de búsqueda priorizan el contenido indexado dentro de etiquetas
+                semánticas, otorgando mayor relevancia a lo que se encuentra en main y article.</p>
+            <h2>Concepto de Enlaces (Hipervínculos)</h2>
+            <p>Los enlaces son el componente fundamental de la Web (el "HyperText" de HTML). Su función es permitir la
+                navegación entre diferentes recursos digitales. Sin enlaces, la web sería solo una colección de
+                documentos aislados.</p>
+            <h3>1. La Etiqueta de Anclaje (a)</h3>
+            <p>Para crear un enlace se utiliza la etiqueta (a) (del inglés anchor). Esta etiqueta requiere atributos
+                específicos para funcionar:
+
+                Atributo href (Hypertext Reference): Es obligatorio. Indica la dirección (URL) o el archivo al que el
+                usuario será dirigido al hacer clic.
+
+                Atributo target: Define dónde se abrirá el enlace. El valor _blank es el más usado para abrir el
+                contenido en una pestaña nueva sin cerrar la actual.
+
+                Texto de Anclaje: Es el texto visible y clicable que queda entre (a) y (/a).</p>
+            <h3>2. Tipos de Enlaces según su destino</h3>
+            <p>En tu enciclopedia es importante distinguir estos tres tipos, ya que se usan constantemente en la
+                maquetación:
+
+                Enlaces Externos: Apuntan a un sitio web diferente al tuyo. Requieren la URL completa (ejemplo:
+                https://www.google.com).
+
+                Enlaces Internos (Relativos): Conectan con otros archivos dentro de tu propio proyecto. Por ejemplo,
+                para ir de tu página principal a tu página de contacto (ejemplo: contacto.html).
+
+                Enlaces de Ancla (Internos a la página): Se usan para saltar a una sección específica de la misma
+                página. Para esto, se usa el símbolo # seguido del id de la etiqueta de destino ejemplo: (a
+                href="#maquetacion">Ir a Maquetación/a).</p>
+            <h3>3. Relación con la Maquetación</h3>
+            <p>En los Enlaces que aparecen arriba de Maquetación porque, normalmente, lo primero que diseñamos es cómo
+                se conectará nuestro sitio. Estos enlaces casi siempre se agrupan dentro de la etiqueta semántica (nav)
+                (Navegación) para formar los menús que vemos en la parte superior de las páginas.</p>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <h2><span>Fuentes de Informacion </span></h2>
+        <ul>
+            <li><b>CERN (Organización Europea para la Investigación Nuclear):</b> "The birth of the World Wide Web".
+            </li>
+            <li><b>W3C (World Wide Web Consortium):</b> "Sir Timothy Berners-Lee Biography".</li>
+            <li><b>ACM (Association for Computing Machinery):</b> "A.M. Turing Award - Timothy J. Berners-Lee".</li>
+            <li><b>Internet Hall of Fame:</b> "Official Inductee Profile and History".</li>
+            <li><b>Enciclopedia Británica:</b> "Tim Berners-Lee - British Computer Scientist".</li>
+        </ul>
+        <hr>
+        <section>
+            <h2>Informacion de elaboración</h2>
+            <p>Este proyecto ha sido desarrollado siguiendo una metodología de aprendizaje activo, bajo los siguientes
+                parámetros:</p>
+
+            <ul>
+                <li><strong>Dirección del Proyecto:</strong> Steven (Estudiante de Programación).</li>
+                <li><strong>Mentoría y Tutoría:</strong> Gemini (IA de Google), proporcionando guía técnica en semántica
+                    HTML5 y resolución de errores de enrutamiento.</li>
+                <li><strong>Metodología:</strong> Codificación manual con depuración en tiempo real (Live Server) y
+                    control de versiones (Git).</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+
+</html>
