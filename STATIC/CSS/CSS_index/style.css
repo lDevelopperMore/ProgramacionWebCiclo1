@@ -1,8 +1,13 @@
 /* =========================================
    1. CONFIGURACIÓN GLOBAL (EL LIENZO)
    ========================================= */
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
@@ -17,7 +22,7 @@ body {
    2. NAVEGACIÓN PRO (2 COLUMNAS + PUENTE) 🚀
    ========================================= */
 header {
-    background: linear-gradient(180deg, rgba(75, 41, 196, 0.692) 0%, rgba(224, 231, 255, 0.4) 100%); 
+    background: linear-gradient(180deg, rgba(0, 17, 255, 0.692) 0%, rgba(224, 231, 255, 0.4) 100%);
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
@@ -71,12 +76,12 @@ header {
     left: 50%;
     transform: translateX(-50%);
     background: white;
-    width: 650px; 
-    grid-template-columns: 1fr 1fr; 
+    width: 650px;
+    grid-template-columns: 1fr 1fr;
     top: 100%;
-    max-height: 450px; 
-    overflow-y: auto; 
-    box-shadow: 0px 15px 35px rgba(0,0,0,0.2);
+    max-height: 450px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     border: 1px solid #e2e8f0;
 }
@@ -117,8 +122,14 @@ header {
     padding-left: 25px;
 }
 
-.dropdown-content::-webkit-scrollbar { width: 6px; }
-.dropdown-content::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+.dropdown-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
 
 /* =========================================
    3. HERO SECTION (ZONA DE IMPACTO) ⚡
@@ -129,12 +140,18 @@ header {
     padding: 60px 20px;
     text-align: center;
     border-radius: 24px;
+    border-style: groove;
+    border-color: rgb(176, 195, 238);
     margin: 30px auto;
     max-width: 850px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-.hero h1 { color: white !important; font-size: 2.2rem; margin: 0; }
+.hero h1 {
+    color: white !important;
+    font-size: 2.2rem;
+    margin: 0;
+}
 
 /* =========================================
    4. CONTENIDO PRINCIPAL 🍃
@@ -145,39 +162,69 @@ main section {
     margin: 40px auto;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-h2 { color: #1e293b; margin-bottom: 25px; text-align: center; }
+h2 {
+    color: #1e293b;
+    margin-bottom: 25px;
+    text-align: center;
+}
 
-iframe { 
-    border-radius: 15px; 
-    display: block; 
-    margin: 25px auto; 
-    max-width: 100%; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+iframe {
+    border-radius: 15px;
+    display: block;
+    margin: 25px auto;
+    max-width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* =========================================
-   5. SECCIÓN DE FUENTES (CORRECCIÓN DE COLOR) 🎨
+   5. SECCIÓN DE FUENTES (ESTILO STEVEN) 🎨
    ========================================= */
-.hero ul { padding: 0; text-align: left; max-width: 650px; margin: 30px auto; }
+.hero ul {
+    padding: 0;
+    text-align: left;
+    max-width: 650px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: disc inside;
+}
+
+.hero ol {
+    padding: 0;
+    text-align: left;
+    max-width: 650px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: decimal inside;
+}
+
 .hero li {
     background: white !important;
     color: #1e293b !important;
-    margin-bottom: 12px;
     padding: 18px;
     border-radius: 12px;
-    list-style: none;
-    border-left: 6px solid #60a5fa;
-    font-weight: 500;
+    border: 2px solid #1e293b !important;
+    font-weight: 600;
+    transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero li:hover {
+    transform: translateX(10px);
+    border-color: #2563eb !important;
+    box-shadow: 6px 6px 0px 0px rgba(30, 41, 59, 0.1);
 }
 
 /* =========================================
-   6. FOOTER PROFESIONAL ⚖️
+   6. FOOTER PROFESIONAL (VIOLETA STEVEN) ⚖️
    ========================================= */
 footer {
-    background-color: #ffffff;
+    background: linear-gradient(360deg, rgba(0, 17, 255, 0.692) 0%, rgba(224, 231, 255, 0.4) 100%);
     padding: 60px 20px 30px;
     margin-top: 50px;
     border-top: 4px solid #1e293b;
@@ -195,39 +242,35 @@ footer {
 .footer-card {
     background: #ffffff;
     padding: 25px;
-    border-radius: 8px; /* Bordes menos redondeados para un look más serio */
-    border: 2px solid #1e293b; /* El rectángulo negro/oscuro que pediste */
+    border-radius: 8px;
+    border: 2px solid #1e293b !important;
+    /* Tu rectángulo oscuro */
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-/* Efecto visual al pasar el mouse (sin movimiento físico) */
 .footer-card:hover {
-    background: #f8fafc; /* Un cambio de fondo muy sutil */
-    border-color: #2563eb; /* El borde cambia al azul de tu marca */
-    box-shadow: 8px 8px 0px 0px #1e293b; /* Crea una "sombra sólida" tipo diseño retro/técnico */
+    background: #f8fafc;
+    border-color: #2563eb !important;
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0px 0px #1e293b;
 }
 
 .footer-card h3 {
     color: #1e293b;
     font-size: 1.1rem;
     margin-bottom: 15px;
-    border-bottom: 2px solid #e2e8f0; /* Línea divisoria interna */
+    border-bottom: 2px solid #e2e8f0;
     padding-bottom: 10px;
-}
-
-.footer-card h3 {
-    color: #1e293b;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
     font-weight: 700;
 }
 
 .footer-card p {
     margin: 8px 0;
     font-size: 0.95rem;
+    color: #475569;
 }
 
 .social-links {
@@ -241,18 +284,19 @@ footer {
     color: #2563eb;
     padding: 10px 20px;
     border-radius: 8px;
+    border: 2px solid #1e293b;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     align-items: center;
     gap: 8px;
     transition: 0.3s;
 }
 
-.btn-social:hover { 
-    background: #2563eb; 
-    color: white; 
-    transform: translateY(-3px); 
+.btn-social:hover {
+    background: #1e293b;
+    color: white !important;
+    transform: scale(1.05);
 }
 
 .status-pulse {
@@ -276,27 +320,45 @@ footer {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(2.5); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
 }
 
-.copyright { 
-    text-align: center; 
-    margin-top: 40px; 
-    color: #94a3b8; 
-    font-size: 0.85rem; 
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 /* =========================================
    7. RESPONSIVE Y UTILIDADES
    ========================================= */
 @media (max-width: 700px) {
-    .dropdown-content { width: 300px; grid-template-columns: 1fr; }
+    .dropdown-content {
+        width: 300px;
+        grid-template-columns: 1fr;
+    }
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translate(-50%, 10px); }
-    to { opacity: 1; transform: translate(-50%, 0); }
+    from {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
 .back-to-top {
@@ -320,4 +382,103 @@ footer {
 .back-to-top:hover {
     transform: translateY(-5px);
     background: #1e293b;
+}
+
+/* =========================================
+   8. HAMBURGUESA RESPONSIVE MENU (SEMANA 7)
+   ========================================= */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* =========================================
+   9. TABLAS PROFESIONALES
+   ========================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Para que los bordes redondeados funcionen */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+    background-color: #2563eb;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    text-align: left;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover {
+    background-color: #f8fafc;
 }

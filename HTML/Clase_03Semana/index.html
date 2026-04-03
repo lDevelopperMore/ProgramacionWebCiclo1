@@ -5,25 +5,83 @@
     <title>Arquitectura Semántica en HTML5</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../STATIC/CSS/CSS_index/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
     <main>
         <header>
-            <p><a href="../index.html"> Indice de contenido</a></p>
-            <p><a href="./Clase_01Semana/index.html"> Semana 1: ¿Que es html? Versiones, Clases de etiquetas, Estructura
-                    base, Datos curiosos</a></p>
-            <p><a href="./Clase_01Semana/biografia.html"> Semana 1: Ejercicio practico hacer biografia</a></p>
-            <p><a href="./Clase_02Semana/index.html"> Semana 2: Tablas,listas</a></p>
-            <p><a href="./Clase_02Semana/MultimediayEnrutamiento.html"> Semana 2: Multimedia y Enrutamiento</a></p>
-            <p><a href="./Clase_02Semana/Biografia_Semana2.html"> Semana 2: Biografia aplicando Tablas, contenido
-                    multimedia y enrutamiento </a></p>
-            <p><a href="../Clase_03Semana/index.html"> Semana 3: Maquetación Semántica y Arquitectura de Enlaces en
-                    HTML5</a></p>
-            <p><a href="../Clase_03Semana/Biografia_Semana3.html"> Semana 3: Diseño de un sitio web </a></p>
-            <hr>
+            <nav>
+                <a href="../index.html" class="btn-inicio"> Inicio</a>
+                <div class="dropdown">
+                    <button class="dropbtn">📚 Ver Semanas de Clase ▼</button>
+                    <div class="dropdown-content">
+                        <a href="../Clase_01Semana/index.html">
+                            <span class="week-title">Semana 1</span>
+                            <span class="week-desc">¿Que es html? Versiones, Etiquetas y Estructura</span>
+                        </a>
+                        <a href="../Clase_01Semana/biografia.html">
+                            <span class="week-title">Semana 1</span>
+                            <span class="week-desc">Ejercicio práctico: Biografía</span>
+                        </a>
+                        <a href="../Clase_02Semana/index.html">
+                            <span class="week-title">Semana 2</span>
+                            <span class="week-desc">Tablas y Listas</span>
+                        </a>
+                        <a href="../Clase_02Semana/MultimediayEnrutamiento.html">
+                            <span class="week-title">Semana 2</span>
+                            <span class="week-desc">Multimedia y Enrutamiento</span>
+                        </a>
+                        <a href="../Clase_02Semana/Biografia_Semana2.html">
+                            <span class="week-title">Semana 2</span>
+                            <span class="week-desc">Biografía con Tablas y Multimedia</span>
+                        </a>
+                        <a href="../Clase_03Semana/index.html">
+                            <span class="week-title">Semana 3</span>
+                            <span class="week-desc">Maquetación Semántica y Arquitectura HTML5</span>
+                        </a>
+                        <a href="../Clase_03Semana/Biografia_Semana3.html">
+                            <span class="week-title">Semana 3</span>
+                            <span class="week-desc">Diseño de un sitio web</span>
+                        </a>
+                        <a href="../Clase_04Semana/index.html">
+                            <span class="week-title">Semana 4 </span>
+                            <span class="week-desc">Primer Parcial</span>
+                        </a>
+                        <a href="../Clase_05Semana/index.html">
+                            <span class="week-title">Semana 5</span>
+                            <span class="week-desc">Fundamentos de Diseño y CSS</span>
+                        </a>
+                        <a href="../Clase_05Semana/Biografia_Semana5.html">
+                            <span class="week-title">Semana 5</span>
+                            <span class="week-desc">Biografía con Estilización CSS</span>
+                        </a>
+                        <a href="../Clase_06Semana/index.html">
+                            <span class="week-title">Semana 6</span>
+                            <span class="week-desc">Tablas, Listas y Marcos en CSS</span>
+                        </a>
+                        <a href="../Clase_06Semana/Biografia_Semana6.html">
+                            <span class="week-title">Semana 6</span>
+                            <span class="week-desc">Biografía con Tablas y Marcos CSS</span>
+                        </a>
+                        <a href="../Clase_07Semana/index.html">
+                            <span class="week-title">Semana 7</span>
+                            <span class="week-desc">Maquetación y Navegación Desplegable</span>
+                        </a>
+                        <a href="./Clase_08Semana/index.html">
+                            <span class="week-title">Semana 8</span>
+                            <span class="week-desc">Parcial Corte 2</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
         </header>
-        <section>
+        <section class="hero">
             <h1>Arquitectura Semántica en HTML5</h1>
             <h2>Concepto de Maquetación Semántica</h2>
             <p>La maquetación semántica es la práctica de utilizar etiquetas HTML que describen su contenido y función
@@ -111,30 +169,38 @@
         </section>
     </main>
     <footer>
-        <hr>
-        <h2><span>Fuentes de Informacion </span></h2>
-        <ul>
-            <li><b>CERN (Organización Europea para la Investigación Nuclear):</b> "The birth of the World Wide Web".
-            </li>
-            <li><b>W3C (World Wide Web Consortium):</b> "Sir Timothy Berners-Lee Biography".</li>
-            <li><b>ACM (Association for Computing Machinery):</b> "A.M. Turing Award - Timothy J. Berners-Lee".</li>
-            <li><b>Internet Hall of Fame:</b> "Official Inductee Profile and History".</li>
-            <li><b>Enciclopedia Británica:</b> "Tim Berners-Lee - British Computer Scientist".</li>
-        </ul>
-        <hr>
-        <section>
-            <h2>Informacion de elaboración</h2>
-            <p>Este proyecto ha sido desarrollado siguiendo una metodología de aprendizaje activo, bajo los siguientes
-                parámetros:</p>
+        <div class="footer-grid">
+            <div class="footer-card">
+                <h3>Información de elaboración</h3>
+                <p><strong>Autor:</strong> Steven Andrés Moreno Meléndez</p>
+                <p><strong>Institución:</strong> Politécnico Internacional</p>
+                <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
+            </div>
 
-            <ul>
-                <li><strong>Dirección del Proyecto:</strong> Steven (Estudiante de Programación).</li>
-                <li><strong>Mentoría y Tutoría:</strong> Gemini (IA de Google), proporcionando guía técnica en semántica
-                    HTML5 y resolución de errores de enrutamiento.</li>
-                <li><strong>Metodología:</strong> Codificación manual con depuración en tiempo real (Live Server) y
-                    control de versiones (Git).</li>
-            </ul>
-        </section>
+            <div class="footer-card">
+                <h3>Estado del Proyecto</h3>
+                <p>Ciclo 1 - Tecnología en Software</p>
+                <p>Estatus: <span class="status-pulse"></span> Optimización Visual</p>
+            </div>
+
+            <div class="footer-card">
+                <h3>Conéctate</h3>
+                <div class="social-links">
+                    <a href="https://github.com/tu-usuario" target="_blank" class="btn-social">
+                        <i class="ri-github-fill"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="btn-social">
+                        <i class="ri-linkedin-box-fill"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <hr>
+            <p>© 2026 Steven Moreno. Todos los derechos reservados. | Uso estrictamente académico.</p>
+        </div>
+        <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     </footer>
 </body>
 

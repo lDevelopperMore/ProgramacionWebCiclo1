@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Document</title>
+    <title>Primer Parcial</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../STATIC/CSS/CSS_index/style.css">
@@ -82,33 +82,40 @@
     </header>
     <main>
         <section>
-            <h1>Estructura y Estilos de Listas, Tablas y Marcos</h1>
-            <p>1. Estilos para Listas (ul, ol, li)
-                Controlan el marcador y su posición.
-                list-style-type: Cambia el icono (punto, círculo, cuadrado).
-                Valores: disc (por defecto), circle, square, none.
-                list-style-position: Dónde se coloca el punto.
-                Valores: inside (dentro del bloque de texto) o outside (fuera, alineado a la izquierda).
-                list-style-image: Permite usar una imagen pequeña como viñeta: url('imagen.png').
-                2. Estilos para Tablas (table, th, td)
-                Lo más importante aquí es el manejo de los bordes para que no se vean dobles.
-                border-collapse: La propiedad reina de las tablas.
-                collapse: Une los bordes de celdas adyacentes en uno solo.
-                separate: Mantiene los bordes separados (estilo antiguo).
-                border-spacing: Si usas separate, define cuántos píxeles de distancia hay entre celdas.
-                empty-cells: Define si se muestran o no los bordes en celdas que no tienen contenido (show o hide).
-                3. Estilos para Marcos (Bordes)
-                El "marco" es la propiedad border, que es un atajo (shorthand) de tres valores.
-                Sintaxis corta: border: [grosor] [estilo] [color];
-                Ejemplo: border: 2px solid black;
-                Estilos de línea (border-style):
-                solid: Línea continua.
-                dashed: Línea de guiones.
-                dotted: Línea de puntos.
-                double: Línea doble.
-                groove / ridge: Efectos 3D de relieve.
-                Redondeo: border-radius: 10px; (Cuanto mayor el número, más circular es la esquina).
-            </p>
+            <h1>Clase 7: Maquetación y Navegación Desplegable</h1>
+            <p>Podemos hacer botones navegables principalmente estos se usan en el header junto a un nav y dentro de un
+                div en este caso evidenciamos un ejercicio de w3schools
+                donde evidenciamos si entramos al inspector den modo responsivo como un menu de links se vuelve al ser
+                responsivo se optimiza en un menu hamburguesa definiedno las clases en las etiquetas
+                1.paso definir un contenedor div con la clase "topnav" con un id"myTopnav">
+                2.paso definir los anchore dentro de este contenedor div y por ultimo llamamos en un anchore
+                "javascript:void(0);" class="icon" onclick="myFunction()"
+                3.paso definimos el icono con una clase "fa fa-bars" en medio del anchore antes de cerrar el paso 2
+                4.ejecutamos el script con la etiqueta script/funcion myFunction()[ var x =
+                document.getElementById("myTopnav"); ] donde evidenciamos el llamado de el id myTopnav</p>
+            <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active">Home</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                }
+            </script>
         </section>
     </main>
     <footer>
