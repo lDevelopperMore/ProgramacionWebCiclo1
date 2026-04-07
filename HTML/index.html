@@ -5,6 +5,8 @@
     <title>Programacion Web Politecnico Internacional Ciclo1</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Apuntes de Programación Web del Politécnico Internacional - Ciclo 1. Incluye HTML, CSS, maquetación y ejercicios prácticos.">
     <link rel="stylesheet" href="../STATIC/CSS/CSS_index/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link
@@ -15,10 +17,10 @@
 
 <body>
     <header>
-        <nav>
-            <a href="index.html" class="btn-inicio"> Inicio</a>
+        <nav class="topnav" id="navSemanas"> 
+            <a href="index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
             <div class="dropdown">
-                <button class="dropbtn">📚 Ver Semanas de Clase ▼</button>
+                <button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
                 <div class="dropdown-content">
                     <a href="./Clase_01Semana/index.html">
                         <span class="week-title">Semana 1</span>
@@ -72,12 +74,14 @@
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Maquetación y Navegación Desplegable</span>
                     </a>
-                        <a href="./Clase_08Semana/index.html">
+                    <a href="./Clase_08Semana/index.html">
                         <span class="week-title">Semana 8</span>
                         <span class="week-desc">Parcial Corte 2</span>
                     </a>
                 </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="controlSemanas()">
+                <i class="ri-menu-line"></i> </a>
         </nav>
     </header>
     <main>
@@ -88,17 +92,23 @@
             <p> Docente Camilo Andres Ortiz Morales</p>
             <p>Politécnico internacional</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/5YDVJaItmaY?si=g9IB31S297clZxym"
-                title="YouTube video player" frameborder="0"
+                title="Clase de Programación Web - Video introductorio" frameborder="0" loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+
             <h2><span>Fuentes de Informacion </span></h2>
-            <ul>
-                <li><b>CERN (Organización Europea para la Investigación Nuclear):</b> "The birth of the World Wide Web".
+            <ul class="con_disenos_css">
+                <li class="con_disenos_css"><b>CERN (Organización Europea para la Investigación Nuclear):</b> "The birth
+                    of the World Wide Web".
                 </li>
-                <li><b>W3C (World Wide Web Consortium):</b> "Sir Timothy Berners-Lee Biography".</li>
-                <li><b>ACM (Association for Computing Machinery):</b> "A.M. Turing Award - Timothy J. Berners-Lee".</li>
-                <li><b>Internet Hall of Fame:</b> "Official Inductee Profile and History".</li>
-                <li><b>Enciclopedia Británica:</b> "Tim Berners-Lee - British Computer Scientist".</li>
+                <li class="con_disenos_css"><b>W3C (World Wide Web Consortium):</b> "Sir Timothy Berners-Lee Biography".
+                </li>
+                <li class="con_disenos_css"><b>ACM (Association for Computing Machinery):</b> "A.M. Turing Award -
+                    Timothy J. Berners-Lee".</li>
+                <li class="con_disenos_css"><b>Internet Hall of Fame:</b> "Official Inductee Profile and History".</li>
+                <li class="con_disenos_css"><b>Enciclopedia Británica:</b> "Tim Berners-Lee - British Computer
+                    Scientist".</li>
             </ul>
             <hr>
         </section>
@@ -137,6 +147,18 @@
         </div>
         <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     </footer>
+    <script>
+        function controlSemanas() {
+            // Buscamos específicamente tu menú de arriba
+            var x = document.getElementById("navSemanas");
+
+            if (x.className === "topnav") {
+                x.className += " responsive"; // Lo abre
+            } else {
+                x.className = "topnav"; // Lo cierra
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -6,14 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../STATIC/CSS/CSS_index/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </Head>
 
 <body>
     <header>
-        <nav>
-            <a href="../index.html" class="btn-inicio"> Inicio</a>
+        <nav class="topnav" id="navSemanas">
+            <a href="../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
             <div class="dropdown">
-                <button class="dropbtn">📚 Ver Semanas de Clase ▼</button>
+                <button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
                 <div class="dropdown-content">
                     <a href="../clase_01Semana/index.html">
                         <span class="week-title">Semana 1</span>
@@ -67,12 +72,15 @@
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Maquetación y Navegación Desplegable</span>
                     </a>
-                    <a href="./Clase_08Semana/index.html">
+                    <a href="../Clase_08Semana/index.html">
                         <span class="week-title">Semana 8</span>
                         <span class="week-desc">Parcial Corte 2</span>
                     </a>
                 </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="controlSemanas()">
+                <i class="ri-menu-line"></i>
+            </a>
         </nav>
     </header>
     <main>
@@ -82,7 +90,7 @@
             <h2>1. Tablas :(table)</h2>
             <p>Sirven para organizar datos en filas y columnas. Es como una cuadrícula de Excel.</p>
             <h2>1.1 Componentes de las tablas</h2>
-            <table>
+            <table class="con_disenos_css">
 
                 <tr>
                     <th>Etiquetas</th>
@@ -111,21 +119,21 @@
             <h2>2. Listas: (li) </h2>
             <p> Permiten agrupar elementos relacionados. </p>
             <h2>2.1 Clases de listas</h2>
-            <ul>
+            <ul class="con_disenos_css">
                 <dt>Desordenadas (ul)</dt>
-                <li>TD</li>
-                <li>TR</li>
-                <li>TH</li>
+                <li class="con_disenos_css">TD</li>
+                <li class="con_disenos_css">TR</li>
+                <li class="con_disenos_css">TH</li>
             </ul>
-            <ol>
+            <ol class="con_disenos_css">
                 <dt>Ordenadas (ol)</dt>
-                <li>TD</li>
-                <li>TR</li>
-                <li>TH</li>
+                <li class="con_disenos_css">TD</li>
+                <li class="con_disenos_css">TR</li>
+                <li class="con_disenos_css">TH</li>
             </ol>
             <h2>2.2 Descripcion de listas</h2>
             <p> Describen lo que hay dentro de las listas </p>
-            <table>
+            <table class="con_disenos_css">
                 <tr>
                     <th>Tag</th>
                     <th>description</th>
@@ -195,6 +203,18 @@
         </div>
         <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     </footer>
+    <script>
+        function controlSemanas() {
+            // ¡OJO! Aquí debe decir "navSemanas" para que encuentre el menú azul
+            var x = document.getElementById("navSemanas");
+
+            if (x.className === "topnav") {
+                x.className += " responsive"; // Abre el menú
+            } else {
+                x.className = "topnav"; // Lo cierra
+            }
+        }
+    </script>
 </body>
 
 </html>

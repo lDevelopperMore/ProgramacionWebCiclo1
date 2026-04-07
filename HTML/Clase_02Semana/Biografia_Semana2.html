@@ -10,10 +10,10 @@
 
 <body>
 	<header>
-		<nav>
-			<a href="../index.html" class="btn-inicio"> Inicio</a>
+		<nav class="topnav" id="navSemanas">>
+			<a href="../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
 			<div class="dropdown">
-				<button class="dropbtn">📚 Ver Semanas de Clase ▼</button>
+				<button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
 				<div class="dropdown-content">
 					<a href="../clase_01Semana/index.html">
 						<span class="week-title">Semana 1</span>
@@ -67,12 +67,14 @@
 						<span class="week-title">Semana 7</span>
 						<span class="week-desc">Maquetación y Navegación Desplegable</span>
 					</a>
-					<a href="./Clase_08Semana/index.html">
+					<a href="../Clase_08Semana/index.html">
 						<span class="week-title">Semana 8</span>
 						<span class="week-desc">Parcial Corte 2</span>
 					</a>
 				</div>
 			</div>
+			<a href="javascript:void(0);" class="icon" onclick="controlSemanas()">
+				<i class="ri-menu-line"></i> </a>
 		</nav>
 	</header>
 	<main>
@@ -80,9 +82,9 @@
 			<h1 class="sin css"> Biografia de Tim Berners-Lee </h1>
 			<p class="sin css"> Tim Berners-Lee </p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/0jXO6M--lu0?si=XvlkGof0oayvBB4N"
-			title="YouTube video player" frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			<h3 class="sin css">Biografía de Sir Tim Berners-Lee: El Padre de la Web </h3>
 			<p class="sin css">Sir Timothy "Tim" Berners-Lee es un científico de la computación británico, nacido el 8
 				de junio de 1955
@@ -142,7 +144,7 @@
 				<li class="sin css"> 2016 Recibe el Premio Turing (el "Nobel" de la informática). </li>
 			</ol>
 			<h2 class="sin css">Tabla de proyectos </h2>
-			<table >
+			<table>
 				<tr>
 					<th> Proyecto </th>
 					<th> Descripcion </th>
@@ -212,6 +214,18 @@
 		</div>
 		<a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
 	</footer>
+	<script>
+		function controlSemanas() {
+			// ¡OJO! Aquí debe decir "navSemanas" para que encuentre el menú azul
+			var x = document.getElementById("navSemanas");
+
+			if (x.className === "topnav") {
+				x.className += " responsive"; // Abre el menú
+			} else {
+				x.className = "topnav"; // Lo cierra
+			}
+		}
+	</script>
 </body>
 
 </html>

@@ -15,10 +15,10 @@
 
 <body>
     <header>
-        <nav>
-            <a href="../index.html" class="btn-inicio"> Inicio</a>
+        <nav class="topnav" id="navSemanas">
+            <a href="../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
             <div class="dropdown">
-                <button class="dropbtn">📚 Ver Semanas de Clase ▼</button>
+                <button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
                 <div class="dropdown-content">
                     <a href="../Clase_01Semana/index.html">
                         <span class="week-title">Semana 1</span>
@@ -72,33 +72,37 @@
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Maquetación y Navegación Desplegable</span>
                     </a>
-                    <a href="./Clase_08Semana/index.html">
+                    <a href="../Clase_08Semana/index.html">
                         <span class="week-title">Semana 8</span>
                         <span class="week-desc">Parcial Corte 2</span>
                     </a>
                 </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="controlSemanas()">
+                <i class="ri-menu-line"></i> </a>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="hero">
             <h1>Estructura y Estilos de Listas, Tablas y Marcos</h1>
-            <p>1. Estilos para Listas (ul, ol, li)
-                Controlan el marcador y su posición.
+            <h2>1. Estilos para Listas (ul, ol, li)</h2>
+            <p>Controlan el marcador y su posición.
                 list-style-type: Cambia el icono (punto, círculo, cuadrado).
                 Valores: disc (por defecto), circle, square, none.
                 list-style-position: Dónde se coloca el punto.
                 Valores: inside (dentro del bloque de texto) o outside (fuera, alineado a la izquierda).
                 list-style-image: Permite usar una imagen pequeña como viñeta: url('imagen.png').
-                2. Estilos para Tablas (table, th, td)
-                Lo más importante aquí es el manejo de los bordes para que no se vean dobles.
+            </p>
+            <h2>2. Estilos para Tablas (table, th, td)</h2>
+            <p> Lo más importante aquí es el manejo de los bordes para que no se vean dobles.
                 border-collapse: La propiedad reina de las tablas.
                 collapse: Une los bordes de celdas adyacentes en uno solo.
                 separate: Mantiene los bordes separados (estilo antiguo).
                 border-spacing: Si usas separate, define cuántos píxeles de distancia hay entre celdas.
                 empty-cells: Define si se muestran o no los bordes en celdas que no tienen contenido (show o hide).
-                3. Estilos para Marcos (Bordes)
-                El "marco" es la propiedad border, que es un atajo (shorthand) de tres valores.
+            </p>
+            <h2>3. Estilos para Marcos (Bordes)</h2>
+            <p> El "marco" es la propiedad border, que es un atajo (shorthand) de tres valores.
                 Sintaxis corta: border: [grosor] [estilo] [color];
                 Ejemplo: border: 2px solid black;
                 Estilos de línea (border-style):
@@ -145,6 +149,18 @@
         </div>
         <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     </footer>
+    <script>
+        function controlSemanas() {
+            // Buscamos específicamente tu menú de arriba
+            var x = document.getElementById("navSemanas");
+
+            if (x.className === "topnav") {
+                x.className += " responsive"; // Lo abre
+            } else {
+                x.className = "topnav"; // Lo cierra
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -6,14 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../STATIC/CSS/CSS_index/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="../index.html" class="btn-inicio"> Inicio</a>
+        <nav class="topnav" id="navSemanas"> 
+            <a href="../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
             <div class="dropdown">
-                <button class="dropbtn">📚 Ver Semanas de Clase ▼</button>
+                <button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
                 <div class="dropdown-content">
                     <a href="index.html">
                         <span class="week-title">Semana 1</span>
@@ -67,12 +72,15 @@
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Maquetación y Navegación Desplegable</span>
                     </a>
-                    <a href="./Clase_08Semana/index.html">
+                    <a href="../Clase_08Semana/index.html">
                         <span class="week-title">Semana 8</span>
                         <span class="week-desc">Parcial Corte 2</span>
                     </a>
                 </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="controlSemanas()">
+                <i class="ri-menu-line"></i>
+            </a>
         </nav>
     </header>
     <main>
@@ -155,6 +163,16 @@
         </div>
         <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     </footer>
+    <script>
+        function controlSemanas() {
+            var x = document.getElementById("navSemanas");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 </html>

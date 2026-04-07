@@ -15,10 +15,10 @@
 
 <body>
     <header>
-        <nav>
-            <a href="../index.html" class="btn-inicio"> Inicio</a>
+        <nav class="topnav" id="navSemanas"> 
+            <a href="../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
             <div class="dropdown">
-                <button class="dropbtn">📚 Ver Semanas de Clase ▼</button>
+                <button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
                 <div class="dropdown-content">
                     <a href="index.html">
                         <span class="week-title">Semana 1</span>
@@ -79,6 +79,9 @@
                     </a>
                 </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="controlSemanas()">
+                <i class="ri-menu-line"></i>
+            </a>
         </nav>
     </header>
     <main>
@@ -94,8 +97,6 @@
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
-        <section class="hero">
             <h2>¿Que versiones existen?</h2>
             <p>Versiones
                 HTML 1 1991 Solo texto y enlaces.
@@ -108,8 +109,7 @@
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
-        <section class="hero">
+
             <h2>¿Cuales son sus estructuras bases?</h2>
             <p>a maquetacion la estructura principal del lenguaje de etiquetas html se basa principalmente en
                 !DOCTYPE HTML , HTML, HEAD, TITLE, BODY, HEADER, MAIN, SECTION H1, P, FOOTER basicamente son esas pero
@@ -118,8 +118,6 @@
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
-        <section class="hero">
             <h2>¿Quien invento html?</h2>
             <p>Sir Tim Berners-Lee o hizo en 1989 (aunque la primera versión oficial salió en 1991) mientras trabajaba
                 en el
@@ -137,8 +135,6 @@
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
-        <section class="hero">
             <h2>Dato curioso 1 ¿Sabias que?</h2>
             <p>A diferencia de otros inventores que se hicieron multimillonarios cobrando por sus inventos, Tim
                 Berners-Lee decidió
@@ -169,7 +165,7 @@
             <h2>Etiquetas semanticas</h2>
             <p>Son las etiquetas que etiquetan y categorizan datos son la base escencial de apertura del lenguaje de
                 marcado para la arquitectura del mismo
-                ejemplo nav, main footer</p>
+                ejemplo <nav class="topnav" id="navSemanas">, main footer</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/TWdusPEUpfI?si=xmSbbrOBygYGhYMp"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -210,6 +206,16 @@
         </div>
         <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     </footer>
+    <script>
+        function controlSemanas() {
+            var x = document.getElementById("navSemanas");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 </html>

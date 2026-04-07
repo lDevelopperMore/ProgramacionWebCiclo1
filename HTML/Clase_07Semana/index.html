@@ -15,10 +15,10 @@
 
 <body>
     <header>
-        <nav>
-            <a href="../index.html" class="btn-inicio"> Inicio</a>
+        <nav class="topnav" id="navSemanas">
+            <a href="../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
             <div class="dropdown">
-                <button class="dropbtn">📚 Ver Semanas de Clase ▼</button>
+                <button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
                 <div class="dropdown-content">
                     <a href="../Clase_01Semana/index.html">
                         <span class="week-title">Semana 1</span>
@@ -72,47 +72,85 @@
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Maquetación y Navegación Desplegable</span>
                     </a>
-                    <a href="./Clase_08Semana/index.html">
+                    <a href="../Clase_08Semana/index.html">
                         <span class="week-title">Semana 8</span>
                         <span class="week-desc">Parcial Corte 2</span>
                     </a>
                 </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="controlSemanas()">
+                <i class="ri-menu-line"></i>
+            </a>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="hero">
             <h1>Clase 7: Maquetación y Navegación Desplegable</h1>
-            <p>Podemos hacer botones navegables principalmente estos se usan en el header junto a un nav y dentro de un
-                div en este caso evidenciamos un ejercicio de w3schools
-                donde evidenciamos si entramos al inspector den modo responsivo como un menu de links se vuelve al ser
-                responsivo se optimiza en un menu hamburguesa definiedno las clases en las etiquetas
-                1.paso definir un contenedor div con la clase "topnav" con un id"myTopnav">
-                2.paso definir los anchore dentro de este contenedor div y por ultimo llamamos en un anchore
-                "javascript:void(0);" class="icon" onclick="myFunction()"
-                3.paso definimos el icono con una clase "fa fa-bars" en medio del anchore antes de cerrar el paso 2
-                4.ejecutamos el script con la etiqueta script/funcion myFunction()[ var x =
-                document.getElementById("myTopnav"); ] donde evidenciamos el llamado de el id myTopnav</p>
+            <p>Arquitectura de Navegación Responsive
+                En esta sesión implementamos un Menú de Navegación Adaptativo (Mobile First), utilizando la lógica de
+                W3Schools para transformar una lista de enlaces en un Menú Hamburguesa.
+
+                1. Estructura Semántica (HTML5)
+                Para que el navegador entienda nuestra jerarquía, declaramos un contenedor principal con identidad
+                única:
+
+                Contenedor: Un
+                div> o nav> con class="topnav" e id="myTopnav".
+
+                Elementos: Enlaces directos a> para las secciones.
+
+                Trigger (Activador): Un enlace especial con el atributo javascript:void(0); para evitar que la
+                página recargue al hacer clic.
+
+                2. Implementación del Ícono (FontAwesome)
+                Insertamos el ícono de barras (fa fa-bars) dentro del activador. Este será el botón que el
+                usuario verá en dispositivos móviles.
+
+                3. Lógica de Control (JavaScript)
+                Para cambiar el estado del menú (abierto/cerrado), ejecutamos una función que manipula el DOM:
+
+                JavaScript
+                function myFunction() {
+                var x = document.getElementById("myTopnav");
+                // Lógica: Si la clase es "topnav", cámbiala a "topnav responsive"
+                if (x.className === "topnav") {
+                x.className += " responsive";
+                } else {
+                x.className = "topnav";
+                }
+                }
+                📈 Resumen del Flujo de Trabajo:
+                Definir el contenedor e ID.
+
+                Declarar los enlaces (anchor tags).
+
+                Inyectar el ícono con la clase icon.
+
+                Ejecutar el Script para alternar la clase según el ancho de pantalla.</p>
             <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
             <link rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-            <div class="topnav" id="myTopnav">
+            <div class="topnav-ejercicio" id="ejercicioW3">
                 <a href="#home" class="active">Home</a>
                 <a href="#news">News</a>
                 <a href="#contact">Contact</a>
                 <a href="#about">About</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
+                <a href="javascript:void(0);" class="icon" onclick="activarEjercicio()">
+                    <i class="ri-menu-line"></i>
                 </a>
             </div>
             <script>
-                function myFunction() {
-                    var x = document.getElementById("myTopnav");
-                    if (x.className === "topnav") {
+                function activarEjercicio() {
+                    // Buscamos el ID exacto que le pusiste al div: "ejercicioW3"
+                    var x = document.getElementById("ejercicioW3");
+
+                    // Si la clase es la normal, le añadimos " responsive" (con el espacio)
+                    if (x.className === "topnav-ejercicio") {
                         x.className += " responsive";
                     } else {
-                        x.className = "topnav";
+                        // Si ya la tiene, se la quitamos para cerrar el menú
+                        x.className = "topnav-ejercicio";
                     }
                 }
             </script>
@@ -152,6 +190,16 @@
         </div>
         <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     </footer>
+    <script>
+        function controlSemanas() {
+            var x = document.getElementById("navSemanas");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 </html>
