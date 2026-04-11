@@ -5,10 +5,12 @@
     box-sizing: border-box;
 }
 
+/* Asegura que el padding no afecte el ancho total de los elementos */
 html {
     scroll-behavior: smooth;
 }
 
+/* Hace que al navegar por la página el movimiento sea suave */
 body {
     background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
     background-attachment: fixed;
@@ -18,26 +20,33 @@ body {
     line-height: 1.6;
 }
 
+/* Fondo con degradado fijo para que no se mueva al hacer scroll */
 /* =========================================
    2. NAVEGACIÓN PRO (2 COLUMNAS + PUENTE) 🚀
    ========================================= */
 header {
-    /* ESTE ES TU COLOR ORIGINAL */
+
     background: linear-gradient(180deg, rgba(0, 17, 255, 0.692) 0%, rgba(224, 231, 255, 0.4) 100%);
     backdrop-filter: blur(10px);
+    /* Efecto de vidrio esmerilado */
     position: sticky;
+    /* Se queda pegado arriba al bajar */
     top: 0;
     z-index: 2000;
+    /* Asegura que siempre esté por encima del contenido */
     padding: 15px 0;
     border-bottom: 3px solid #2563eb;
     text-align: center;
 }
 
+/* Gradiente azul con transparencia para efecto moderno */
 .dropdown {
     position: relative;
+    /* Base para posicionar el contenido desplegable */
     display: inline-block;
     padding-bottom: 15px;
     margin-bottom: -15px;
+    /* Compensa el padding para no dañar el layout */
 }
 
 .btn-inicio {
@@ -46,15 +55,19 @@ header {
     color: #1e3a8a;
     padding: 10px 20px;
     border-radius: 8px;
+    /* Bordes suavizados */
     font-weight: 700;
     transition: 0.3s;
+    /* Animación suave al pasar el mouse */
 }
 
+/* Estilo del botón de Home */
 .btn-inicio:hover {
     background: #2563eb;
     color: white;
 }
 
+/* Cambio de estado al pasar el mouse por el botón Inicio */
 .dropbtn {
     background-color: #2563eb;
     color: white;
@@ -62,22 +75,30 @@ header {
     font-weight: 700;
     border: none;
     border-radius: 50px;
+    /* Botón tipo 'píldora' */
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    /* Sombra azul brillante */
 }
 
+/* Estilos para el botón de 'Ver Semanas' */
 .dropdown-content {
     display: none;
+    /* Oculto por defecto */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    /* Centra el menú respecto al botón */
     background: white;
     width: 650px;
+    /* Ancho del mega-menú */
     grid-template-columns: 1fr 1fr;
+    /* Divide el menú en 2 columnas iguales */
     top: 100%;
     max-height: 450px;
     overflow-y: auto;
+    /* Permite scroll si hay muchas semanas */
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     border: 1px solid #e2e8f0;
@@ -86,13 +107,16 @@ header {
 .dropdown:hover .dropdown-content {
     display: grid;
     animation: slideUp 0.3s ease;
+    /* Animación de entrada */
 }
 
+/* Muestra el menú y activa el Grid al pasar el mouse */
 .dropdown-content a {
     padding: 15px 20px;
     text-decoration: none;
     display: flex;
     flex-direction: column;
+    /* Apila título arriba y descripción abajo */
     border-bottom: 1px solid #f1f5f9;
     transition: 0.2s;
     text-align: left;
@@ -103,6 +127,7 @@ header {
     font-weight: 800;
     font-size: 0.7rem;
     text-transform: uppercase;
+    /* Texto en mayúsculas */
     margin-bottom: 2px;
 }
 
@@ -119,6 +144,7 @@ header {
     padding-left: 25px;
 }
 
+/* Efecto visual al seleccionar una semana */
 .dropdown-content::-webkit-scrollbar {
     width: 6px;
 }
@@ -128,6 +154,7 @@ header {
     border-radius: 10px;
 }
 
+/* Estilización de la barra de scroll del menú */
 /* =========================================
    3. HERO SECTION (ZONA DE IMPACTO) ⚡
    ========================================= */
@@ -138,12 +165,14 @@ header {
     text-align: center;
     border-radius: 24px;
     border-style: groove;
+    /* Borde con relieve clásico */
     border-color: rgb(176, 195, 238);
     margin: 30px auto;
     max-width: 850px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
+/* Gradiente oscuro a azul para que el texto blanco resalte */
 .hero h1 {
     color: white !important;
     font-size: 2.2rem;
@@ -160,6 +189,7 @@ main section {
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* Sombra suave para separar del fondo */
 }
 
 h2 {
@@ -170,19 +200,21 @@ h2 {
 
 iframe {
     border-radius: 15px;
+    /* Bordes redondeados para videos de YouTube */
     display: block;
     margin: 25px auto;
-    max-width: 100%;
+    max-width: 100%; /* Hace que el video sea responsivo Usted puede ser grande, 
+    pero NUNCA sea más ancho que la pantalla del celular"*/
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* =========================================
    5. SECCIÓN DE FUENTES (ESTILO STEVEN) 🎨
    ========================================= */
-.hero ul.con_disenos_css {
+.hero ul.con_estilos_css {
     padding: 0;
     text-align: left;
-    max-width: 650px;
+    max-width: 650px; /* hace que la lista no sea mas grande que la pantalla */
     margin: 30px auto;
     display: flex;
     flex-direction: column;
@@ -190,7 +222,7 @@ iframe {
     list-style: disc inside;
 }
 
-.hero ol.con_disenos_css {
+.hero ol.con_estilos_css {
     padding: 0;
     text-align: left;
     max-width: 650px;
@@ -201,7 +233,7 @@ iframe {
     list-style: decimal inside;
 }
 
-.hero li.con_disenos_css {
+.hero li.con_estilos_css {
     background: white !important;
     color: #1e293b !important;
     padding: 18px;
@@ -209,10 +241,12 @@ iframe {
     border: 2px solid #1e293b !important;
     font-weight: 600;
     transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Animación fluida con curva de aceleración profesional */
 }
 
-.hero li.con_disenos_css:hover {
+.hero li.con_estilos_css:hover {
     transform: translateX(10px);
+    /* El elemento se desliza a la derecha al tocarlo */
     border-color: #2563eb !important;
     box-shadow: 6px 6px 0px 0px rgba(30, 41, 59, 0.1);
 }
@@ -228,9 +262,12 @@ footer {
     position: relative;
 }
 
+/* Degradado invertido para dar sensación de cierre */
 .footer-grid {
     display: grid;
+    /* Sistema de rejilla para organizar las tarjetas */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Tarjetas responsivas que se adaptan al espacio disponible */
     gap: 40px;
     max-width: 1100px;
     margin: 0 auto;
@@ -306,6 +343,7 @@ footer {
     position: relative;
 }
 
+/* Punto verde de 'En vivo' */
 .status-pulse::after {
     content: '';
     width: 100%;
@@ -316,6 +354,7 @@ footer {
     animation: pulse 2s infinite;
 }
 
+/* Efecto de onda expansiva infinita */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -337,12 +376,14 @@ footer {
 }
 
 /* =========================================
-   7. RESPONSIVE Y UTILIDADES
+   7. RESPONSIVE Y UTILIDADES ajusta el tamaño de las cosas
    ========================================= */
 @media (max-width: 700px) {
     .dropdown-content {
         width: 300px;
+        /* En PC mide 650px, aquí lo achicamos para que quepa */
         grid-template-columns: 1fr;
+        /* Cambiamos de 2 columnas a 1 sola para que sea fácil leer en el móvil */
     }
 }
 
@@ -382,27 +423,31 @@ footer {
 }
 
 /* =========================================
-   8. CORRECCIÓN MENÚ RESPONSIVO (FINAL) 🚀
+   8. CORRECCIÓN MENÚ RESPONSIVO (FINAL) 🚀 controla el click del boton responsive
    ========================================= */
 
-/* Escondemos el icono de barras en computadoras grandes */
+/* Escondemos el menú normal y mostramos el icono de 'hamburguesa' */
 .topnav .icon {
     display: none;
     text-decoration: none;
 }
 
 @media screen and (max-width: 700px) {
+
     /* Ajustamos el contenedor para que los elementos respiren */
     #navSemanas {
         display: flex;
-        flex-direction: row; /* Alinea Inicio y Hamburguesa en la misma fila */
+        flex-direction: row;
+        /* Alinea Inicio y Hamburguesa en la misma fila */
         justify-content: space-between;
         align-items: center;
         padding: 15px 25px;
         position: relative;
-        background: transparent !important; /* Mantiene tu degradado original */
+        background: transparent !important;
+        /* Mantiene tu degradado original */
     }
 
+    /* Cuando la pantalla es menor a 700px (Celulares) */
     /* Ajustamos el botón de Inicio para que no ocupe todo el ancho */
     .btn-inicio {
         margin: 0 !important;
@@ -414,7 +459,8 @@ footer {
     /* Mostramos las 3 rayitas alineadas a la derecha */
     #navSemanas .icon {
         display: block;
-        color: #1e3a8a; /* Color oscuro para que se vea sobre el fondo claro */
+        color: #1e3a8a;
+        /* Color oscuro para que se vea sobre el fondo claro */
         font-size: 28px;
         cursor: pointer;
     }
@@ -425,11 +471,13 @@ footer {
     }
 
     /* CUANDO SE ACTIVA EL MENÚ (Modo responsive abierto) */
+    /* Cuando el usuario hace clic, el menú aparece a la fuerza ocupando todo el ancho */
     #navSemanas.responsive {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Menú se despliega verticalmente en móvil */
     #navSemanas.responsive .dropdown {
         display: block;
         width: 100%;
@@ -447,6 +495,7 @@ footer {
         overflow-y: auto;
     }
 }
+
 /* --- Estilo para el ejercicio de W3Schools (Dentro de la Sección 8) --- */
 .hero .topnav-ejercicio {
     background-color: #333;
@@ -472,16 +521,21 @@ footer {
 
 /* El botón de hamburguesa específico del ejercicio */
 .hero .topnav-ejercicio .icon {
-    display: none; /* Se esconde en PC */
+    display: none;
+    /* Se esconde en PC */
 }
 
 @media screen and (max-width: 600px) {
-    .hero .topnav-ejercicio a:not(:first-child) { display: none; }
+    .hero .topnav-ejercicio a:not(:first-child) {
+        display: none;
+    }
+
     .hero .topnav-ejercicio a.icon {
         float: right;
         display: block;
         color: white;
     }
+
     /* Clase que activa el JS para mostrar los links hacia abajo */
     .hero .topnav-ejercicio.responsive a {
         float: none;
@@ -489,12 +543,14 @@ footer {
         text-align: left;
     }
 }
+
 /* =========================================
    9. TABLAS PROFESIONALES
    ========================================= */
-.hero table.con_disenos_css {
-    width: 100%;
+.hero table.con_estilos_css {
+    width: 100%; /*la tabla ocupa todo el ancho de la pantalla del dispositivo no es mas grande que ella*/
     border-collapse: separate;
+    /* Permite redondear las esquinas de la tabla */
     border-spacing: 0;
     background-color: white;
     /* Fondo blanco para que resalte */
@@ -507,7 +563,7 @@ footer {
 }
 
 /* 2. Estilo a todos los TH (Encabezados) automáticamente */
-.hero table.con_disenos_css th {
+.hero table.con_estilos_css th {
     background-color: #2563eb;
     color: white;
     padding: 18px;
@@ -517,22 +573,82 @@ footer {
 }
 
 /* 3. Estilo a todos los TD (Celdas) automáticamente */
-.hero table.con_disenos_css td {
+.hero table.con_estilos_css td {
     padding: 15px;
     border-bottom: 1px solid #e2e8f0;
     text-align: left;
 }
 
 /* 4. Efecto Cebra (Solo filas pares) */
-.hero table.con_disenos_css tr:nth-child(even) {
+.hero table.con_estilos_css tr:nth-child(even) {
     background-color: #f8fafc;
 }
 
 /* 5. Efecto Hover (Brillo al pasar el mouse) */
-.hero table.con_disenos_css tr:hover td {
+.hero table.con_estilos_css tr:hover td {
     background-color: #e0e7ff;
     cursor: pointer;
 }
 
+/* =========================================
+   10. ESTILICACION DE FORMULARIOS
+   ========================================= */
 
+/* Contenedor principal del formulario */
+.formulario-estilizado {
+    max-width: 500px;
+    /* Para que no se estire demasiado */
+    margin: 20px auto;
+    /* Lo centra horizontalmente */
+    text-align: left;
+    /* Alinea el texto a la izquierda dentro del cuadro */
+    padding: 20px;
+}
 
+/* Espaciado entre cada campo */
+.grupo-campo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    /* Etiqueta arriba, Input abajo */
+    /* Pone la etiqueta arriba del input */
+}
+
+/* Estilo para las etiquetas */
+.grupo-campo label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #fff;
+    /* O el color que uses en tu dark mode */
+}
+
+/* Estilo para los inputs y el textarea */
+.grupo-campo input,
+.grupo-campo textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Botón de envío */
+.btn-enviar {
+    background-color: #00a884;
+    /* Un verde similar al de tu pestaña 'Biografia' */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    /* Para que ocupe todo el ancho */
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #008f6f;
+    transform: translateY(-2px);
+    /* Pequeño efecto al pasar el mouse */
+}

@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Primer Parcial</title>
+    <title>Proyectos Importantes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../STATIC/CSS/CSS_index/style.css">
@@ -69,11 +69,11 @@
                         <span class="week-title">Semana 6</span>
                         <span class="week-desc">Biografía con Tablas y Marcos CSS</span>
                     </a>
-                    <a href="../Clase_07Semana/index.html">
+                    <a href="index.html">
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Maquetación y Navegación Desplegable</span>
                     </a>
-                    <a href="../Clase_07Semana/Biografia_Semana7.html">
+                    <a href="Biografia_Semana7.html">
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Ejercicio práctico: Biografía con Maquetación y Navegación
                             Desplegable</span>
@@ -98,44 +98,31 @@
     </header>
     <main>
         <section class="hero">
-            <h1>Primer Parcial corte 1</h1>
+            <div class="topnav-ejercicio" id="ejercicioW3">
+                <a href="Biografia_formulario.html" class="active">Biografia</a>
+                <a href="Proyectos_import.html">Proyectos importantes</a>
+                <a href="Cronologia_proye.html">Cronologia proyectos</a>
+                <a href="Tabla_Resumen_Proye.html">Tabla de proyectos</a>
+                <a href="Contactenos.html">Contactenos</a>
+                <a href="javascript:void(0);" class="icon" onclick="activarEjercicio()">
+                    <i class="ri-menu-line"></i>
+                </a>
+            </div>
+            <h1>Proyectos Importantes</h1>
+            <p>Lista de proyectos importantes de Tim Berners-Lee:</p>
+            <ul class="con_estilos_css">
+                <li class="con_estilos_css">WorldWideWeb (1990)</li>
+                <li class="con_estilos_css">HTML (1990)</li>
+                <li class="con_estilos_css">CSS (1996)</li>
+                <li class="con_estilos_css">HTTP (1990)</li>
+            </ul>
             <hr>
+            <form onsubmit="funcionFormulario(this); return false;">
+                ingrese el codigo hexadecimal del color: <input type="text">
+                <input type="submit">
+            </form>
         </section>
     </main>
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-card">
-                <h3>Información de elaboración</h3>
-                <p><strong>Autor:</strong> Steven Andrés Moreno Meléndez</p>
-                <p><strong>Institución:</strong> Politécnico Internacional</p>
-                <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
-            </div>
-
-            <div class="footer-card">
-                <h3>Estado del Proyecto</h3>
-                <p>Ciclo 1 - Tecnología en Software</p>
-                <p>Estatus: <span class="status-pulse"></span> Optimización Visual</p>
-            </div>
-
-            <div class="footer-card">
-                <h3>Conéctate</h3>
-                <div class="social-links">
-                    <a href="https://github.com/tu-usuario" target="_blank" class="btn-social">
-                        <i class="ri-github-fill"></i> GitHub
-                    </a>
-                    <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="btn-social">
-                        <i class="ri-linkedin-box-fill"></i> LinkedIn
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <hr>
-            <p>© 2026 Steven Moreno. Todos los derechos reservados. | Uso estrictamente académico.</p>
-        </div>
-        <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
-    </footer>
     <script src="../../STATIC/JS/script.js"></script>
 </body>
 

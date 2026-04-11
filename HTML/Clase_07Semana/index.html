@@ -6,9 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../STATIC/CSS/CSS_index/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -16,7 +17,7 @@
 <body>
     <header>
         <nav class="topnav" id="navSemanas">
-            <a href="../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
+            <a href="../../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
             <div class="dropdown">
                 <button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
                 <div class="dropdown-content">
@@ -68,13 +69,26 @@
                         <span class="week-title">Semana 6</span>
                         <span class="week-desc">Biografía con Tablas y Marcos CSS</span>
                     </a>
-                    <a href="../Clase_07Semana/index.html">
+                    <a href="index.html">
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Maquetación y Navegación Desplegable</span>
+                    </a>
+                    <a href="Biografia_Semana7.html">
+                        <span class="week-title">Semana 7</span>
+                        <span class="week-desc">Ejercicio práctico: Biografía con Maquetación y Navegación
+                            Desplegable</span>
                     </a>
                     <a href="../Clase_08Semana/index.html">
                         <span class="week-title">Semana 8</span>
                         <span class="week-desc">Parcial Corte 2</span>
+                    </a>
+                    <a href="../Clase_09Semana/index.html">
+                        <span class="week-title">Semana 9</span>
+                        <span class="week-desc">Formularios y Subida a la nube</span>
+                    </a>
+                    <a href="../Clase_09Semana/Biografia_formulario.html">
+                        <span class="week-title">Semana 9</span>
+                        <span class="week-desc">Biografía con Formulario y Subida a la nube</span>
                     </a>
                 </div>
             </div>
@@ -85,48 +99,50 @@
     </header>
     <main>
         <section class="hero">
-            <h1>Clase 7: Maquetación y Navegación Desplegable</h1>
-            <p>Arquitectura de Navegación Responsive
-                En esta sesión implementamos un Menú de Navegación Adaptativo (Mobile First), utilizando la lógica de
-                W3Schools para transformar una lista de enlaces en un Menú Hamburguesa.
+            <h1>Clase 7: Maquetación (Flexbox & Grid) y Navegación</h1>
 
-                1. Estructura Semántica (HTML5)
-                Para que el navegador entienda nuestra jerarquía, declaramos un contenedor principal con identidad
-                única:
+            <h2>1. ¿Para qué usamos Flexbox?</h2>
+            <p>
+                Implementamos <strong>Flexbox</strong> como un modelo de diseño unidimensional. Su función principal es
+                permitir que los elementos dentro de un contenedor (como nuestro menú) se alineen y distribuyan el
+                espacio de forma flexible. Lo usamos para que los botones de navegación se centren automáticamente y no
+                se amontonen, facilitando una interfaz limpia.
+            </p>
 
-                Contenedor: Un
-                div> o nav> con class="topnav" e id="myTopnav".
+            <h2>2. ¿Para qué usamos CSS Grid?</h2>
+            <p>
+                A diferencia de Flexbox, utilizamos <strong>CSS Grid</strong> para la maquetación bidimensional. Esto
+                nos sirve para organizar estructuras más complejas como el Footer, donde necesitamos controlar filas y
+                columnas simultáneamente. Con Grid, definimos rejillas precisas que mantienen el orden de las tarjetas
+                de información sin importar el tamaño de la pantalla.
+            </p>
 
-                Elementos: Enlaces directos a> para las secciones.
+            <h2>3. Navegación Responsive (JavaScript)</h2>
+            <p>
+                Para que el sitio sea "Mobile First", usamos la lógica de W3Schools. Declaramos un contenedor
+                <code>&lt;nav class="topnav" id="myTopnav"&gt;</code>. Mediante JavaScript, creamos un activador para el
+                icono de barras que alterna la clase a "responsive", permitiendo que el menú pase de ser horizontal
+                (Flexbox) a una lista vertical funcional en celulares.
+            </p>
 
-                Trigger (Activador): Un enlace especial con el atributo javascript:void(0); para evitar que la
-                página recargue al hacer clic.
-
-                2. Implementación del Ícono (FontAwesome)
-                Insertamos el ícono de barras (fa fa-bars) dentro del activador. Este será el botón que el
-                usuario verá en dispositivos móviles.
-
-                3. Lógica de Control (JavaScript)
-                Para cambiar el estado del menú (abierto/cerrado), ejecutamos una función que manipula el DOM:
-
-                JavaScript
-                function myFunction() {
-                var x = document.getElementById("myTopnav");
-                // Lógica: Si la clase es "topnav", cámbiala a "topnav responsive"
-                if (x.className === "topnav") {
-                x.className += " responsive";
-                } else {
-                x.className = "topnav";
-                }
-                }
-                📈 Resumen del Flujo de Trabajo:
-                Definir el contenedor e ID.
-
-                Declarar los enlaces (anchor tags).
-
-                Inyectar el ícono con la clase icon.
-
-                Ejecutar el Script para alternar la clase según el ancho de pantalla.</p>
+            <h2> Resumen Técnico</h2>
+            <p>
+                1. <strong>Flexbox:</strong> Alineación de menús e iconos en un solo eje.<br>
+                2. <strong>Grid:</strong> Creación de la estructura general y rejillas del pie de página.<br>
+                3. <strong>DOM:</strong> Manipulación de clases con JS para la interactividad.
+            </p>
+            <h3>Análisis Técnico de Maquetación</h3>
+            <p>
+                <strong>Uso de Flexbox:</strong> Aplicamos <code>display: flex</code> en el menú secundario
+                (<code>.topnav-ejercicio</code>) para lograr una alineación horizontal fluida de los enlaces. Esto
+                permite que el menú sea "Flexible", ajustando el espacio entre botones automáticamente.
+            </p>
+            <p>
+                <strong>Uso de CSS Grid:</strong> La estructura del pie de página utiliza <code>display: grid</code>. A
+                diferencia de Flexbox, Grid nos permite crear una rejilla bidimensional para organizar la "Información
+                de elaboración", el "Estado del Proyecto" y los "Links Sociales" en columnas perfectas que se mantienen
+                alineadas tanto en ancho como en alto.
+            </p>
             <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
             <link rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -140,20 +156,11 @@
                     <i class="ri-menu-line"></i>
                 </a>
             </div>
-            <script>
-                function activarEjercicio() {
-                    // Buscamos el ID exacto que le pusiste al div: "ejercicioW3"
-                    var x = document.getElementById("ejercicioW3");
-
-                    // Si la clase es la normal, le añadimos " responsive" (con el espacio)
-                    if (x.className === "topnav-ejercicio") {
-                        x.className += " responsive";
-                    } else {
-                        // Si ya la tiene, se la quitamos para cerrar el menú
-                        x.className = "topnav-ejercicio";
-                    }
-                }
-            </script>
+            <hr>
+            <form onsubmit="funcionFormulario(this); return false;">
+                ingrese el codigo hexadecimal del color: <input type="text">
+                <input type="submit">
+            </form>
         </section>
     </main>
     <footer>
@@ -190,16 +197,7 @@
         </div>
         <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     </footer>
-    <script>
-        function controlSemanas() {
-            var x = document.getElementById("navSemanas");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
+    <script src="../../STATIC/JS/script.js"></script>
 </body>
 
 </html>

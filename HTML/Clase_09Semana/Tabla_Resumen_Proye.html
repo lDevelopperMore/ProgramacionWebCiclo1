@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Primer Parcial</title>
+    <title>Tabla de Resumen de Proyectos y logos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../STATIC/CSS/CSS_index/style.css">
@@ -69,11 +69,11 @@
                         <span class="week-title">Semana 6</span>
                         <span class="week-desc">Biografía con Tablas y Marcos CSS</span>
                     </a>
-                    <a href="../Clase_07Semana/index.html">
+                    <a href="index.html">
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Maquetación y Navegación Desplegable</span>
                     </a>
-                    <a href="../Clase_07Semana/Biografia_Semana7.html">
+                    <a href="Biografia_Semana7.html">
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Ejercicio práctico: Biografía con Maquetación y Navegación
                             Desplegable</span>
@@ -98,44 +98,59 @@
     </header>
     <main>
         <section class="hero">
-            <h1>Primer Parcial corte 1</h1>
+            <div class="topnav-ejercicio" id="ejercicioW3">
+                <a href="Biografia_formulario.html" class="active">Biografia</a>
+                <a href="Proyectos_import.html">Proyectos importantes</a>
+                <a href="Cronologia_proye.html">Cronologia proyectos</a>
+                <a href="Tabla_Resumen_Proye.html">Tabla de proyectos</a>
+                <a href="Contactenos.html">Contactenos</a>
+                <a href="javascript:void(0);" class="icon" onclick="activarEjercicio()">
+                    <i class="ri-menu-line"></i>
+                </a>
+            </div>
+            <h1>Tabla de proyectos </h1>
+            <table class="con_estilos_css">
+                <tr class="con_estilos_css">
+                    <th> Proyecto </th>
+                    <th> Descripcion </th>
+                    <th> logo </th>
+                </tr>
+                <tr class="con_estilos_css">
+                    <td>World Wide Web (WWW)</td>
+                    <td> El sistema de gestión de información más importante del mundo. Inventó el HTML, HTTP y las URL
+                        para que todos podamos navegar por internet usando un navegador.
+                    <td> <img src="../../STATIC/IMAGENES/WorldWideWeb.jpg" alt="Logo world wide " title="World wide web"
+                            style="width:200px;height:200px;"> </td>
+                </tr>
+                <tr class="con_estilos_css">
+                    <td>W3C (World Wide Web Consortium) </td>
+                    <td> Organización internacional que fundó para crear los estándares de la web. Gracias a esto, la
+                        web es gratuita, abierta y no le pertenece a ninguna empresa. </td>
+                    <td> <img src="../../STATIC/IMAGENES/WorldWideWebConsortiun.png" alt="Logo world wide consortium "
+                            title="World wide web" style="width:200px;height:200px;"> </td>
+                </tr>
+                <tr class="con_estilos_css">
+                    <td>Solid (Social Linked Data)</td>
+                    <td>Su proyecto actual más importante. Busca que los usuarios recuperen el control de sus datos
+                        personales, guardándolos en "pods" privados en lugar de dárselos a grandes empresas.</td>
+                    <td> <img src="../../STATIC/IMAGENES/SocialLinkedData.png" alt="Logo world wide consortium "
+                            title="World wide web" style="width:200px;height:200px;"> </td>
+                </tr>
+                <tr class="con_estilos_css">
+                    <td> Web Semántica (Linked Data) </td>
+                    <td> Una evolución de la web donde las máquinas pueden "entender" los datos. Permite que la
+                        información de diferentes sitios se conecte de forma inteligente y automática. </td>
+                    <td> <img src="../../STATIC/IMAGENES/WebSemantica.jpg" alt="Logo world wide consortium "
+                            title="World wide web" style="width:200px;height:200px;"> </td>
+                </tr>
+            </table>
             <hr>
+            <form onsubmit="funcionFormulario(this); return false;">
+                ingrese el codigo hexadecimal del color: <input type="text">
+                <input type="submit">
+            </form>
         </section>
     </main>
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-card">
-                <h3>Información de elaboración</h3>
-                <p><strong>Autor:</strong> Steven Andrés Moreno Meléndez</p>
-                <p><strong>Institución:</strong> Politécnico Internacional</p>
-                <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
-            </div>
-
-            <div class="footer-card">
-                <h3>Estado del Proyecto</h3>
-                <p>Ciclo 1 - Tecnología en Software</p>
-                <p>Estatus: <span class="status-pulse"></span> Optimización Visual</p>
-            </div>
-
-            <div class="footer-card">
-                <h3>Conéctate</h3>
-                <div class="social-links">
-                    <a href="https://github.com/tu-usuario" target="_blank" class="btn-social">
-                        <i class="ri-github-fill"></i> GitHub
-                    </a>
-                    <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="btn-social">
-                        <i class="ri-linkedin-box-fill"></i> LinkedIn
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <hr>
-            <p>© 2026 Steven Moreno. Todos los derechos reservados. | Uso estrictamente académico.</p>
-        </div>
-        <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
-    </footer>
     <script src="../../STATIC/JS/script.js"></script>
 </body>
 

@@ -2,13 +2,14 @@
 <html lang="es">
 
 <head>
-    <title>Primer Parcial</title>
+    <title>Segundo Parcial</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../STATIC/CSS/CSS_index/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -16,7 +17,7 @@
 <body>
     <header>
         <nav class="topnav" id="navSemanas">
-            <a href="../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
+            <a href="../../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
             <div class="dropdown">
                 <button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
                 <div class="dropdown-content">
@@ -72,9 +73,22 @@
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Maquetación y Navegación Desplegable</span>
                     </a>
+                    <a href="../Clase_07Semana/Biografia_Semana7.html">
+                        <span class="week-title">Semana 7</span>
+                        <span class="week-desc">Ejercicio práctico: Biografía con Maquetación y Navegación
+                            Desplegable</span>
+                    </a>
                     <a href="index.html">
                         <span class="week-title">Semana 8</span>
                         <span class="week-desc">Parcial Corte 2</span>
+                    </a>
+                    <a href="../Clase_09Semana/index.html">
+                        <span class="week-title">Semana 9</span>
+                        <span class="week-desc">Formularios y Subida a la nube</span>
+                    </a>
+                    <a href="../Clase_09Semana/Biografia_formulario.html">
+                        <span class="week-title">Semana 9</span>
+                        <span class="week-desc">Biografía con Formulario y Subida a la nube</span>
                     </a>
                 </div>
             </div>
@@ -85,6 +99,11 @@
     <main>
         <section class="hero">
             <h1>Segundo Parcial corte 2</h1>
+            <hr>
+            <form onsubmit="funcionFormulario(this); return false;">
+                ingrese el codigo hexadecimal del color: <input type="text">
+                <input type="submit">
+            </form>
         </section>
     </main>
     <footer>
@@ -121,18 +140,7 @@
         </div>
         <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     </footer>
-    <script>
-        function controlSemanas() {
-            // Buscamos específicamente tu menú de arriba
-            var x = document.getElementById("navSemanas");
-
-            if (x.className === "topnav") {
-                x.className += " responsive"; // Lo abre
-            } else {
-                x.className = "topnav"; // Lo cierra
-            }
-        }
-    </script>
+<script src="../../STATIC/JS/script.js"></script>
 </body>
 
 </html>

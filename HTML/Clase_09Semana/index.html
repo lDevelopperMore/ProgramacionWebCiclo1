@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Formularios Y Subida a la Nube</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../STATIC/CSS/CSS_index/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="topnav" id="navSemanas">
+            <a href="../../index.html" class="btn-inicio"><i class="ri-home-4-line"></i> Inicio</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
+                <div class="dropdown-content">
+                    <a href="../Clase_01Semana/index.html">
+                        <span class="week-title">Semana 1</span>
+                        <span class="week-desc">¿Que es html? Versiones, Etiquetas y Estructura</span>
+                    </a>
+                    <a href="../Clase_01Semana/biografia.html">
+                        <span class="week-title">Semana 1</span>
+                        <span class="week-desc">Ejercicio práctico: Biografía</span>
+                    </a>
+                    <a href="../Clase_02Semana/index.html">
+                        <span class="week-title">Semana 2</span>
+                        <span class="week-desc">Tablas y Listas</span>
+                    </a>
+                    <a href="../Clase_02Semana/MultimediayEnrutamiento.html">
+                        <span class="week-title">Semana 2</span>
+                        <span class="week-desc">Multimedia y Enrutamiento</span>
+                    </a>
+                    <a href="../Clase_02Semana/Biografia_Semana2.html">
+                        <span class="week-title">Semana 2</span>
+                        <span class="week-desc">Ejercicio Practico Biografía con Tablas y Multimedia</span>
+                    </a>
+                    <a href="../Clase_03Semana/index.html">
+                        <span class="week-title">Semana 3</span>
+                        <span class="week-desc">Maquetación Semántica y Arquitectura HTML5</span>
+                    </a>
+                    <a href="../Clase_03Semana/Biografia_Semana3.html">
+                        <span class="week-title">Semana 3</span>
+                        <span class="week-desc">Ejercicio Practico Diseño de un sitio web</span>
+                    </a>
+                    <a href="../Clase_04Semana/index.html">
+                        <span class="week-title">Semana 4 </span>
+                        <span class="week-desc">Primer Parcial</span>
+                    </a>
+                    <a href="../Clase_05Semana/index.html">
+                        <span class="week-title">Semana 5</span>
+                        <span class="week-desc">Fundamentos de Diseño y CSS</span>
+                    </a>
+                    <a href="../Clase_05Semana/Biografia_Semana5.html">
+                        <span class="week-title">Semana 5</span>
+                        <span class="week-desc">Ejercicio Practico Biografía con Estilización CSS</span>
+                    </a>
+                    <a href="../Clase_06Semana/index.html">
+                        <span class="week-title">Semana 6</span>
+                        <span class="week-desc">Tablas, Listas y Marcos en CSS</span>
+                    </a>
+                    <a href="../Clase_06Semana/Biografia_Semana6.html">
+                        <span class="week-title">Semana 6</span>
+                        <span class="week-desc">Ejercicio Practico Biografía con Tablas y Marcos CSS</span>
+                    </a>
+                    <a href="../Clase_07Semana/index.html">
+                        <span class="week-title">Semana 7</span>
+                        <span class="week-desc">Maquetación y Navegación Desplegable</span>
+                    </a>
+                    <a href="../Clase_07Semana/Biografia_Semana7.html">
+                        <span class="week-title">Semana 7</span>
+                        <span class="week-desc">Ejercicio práctico: Biografía con Maquetación y Navegación
+                            Desplegable</span>
+                    </a>
+                    <a href="../Clase_08Semana/index.html">
+                        <span class="week-title">Semana 8</span>
+                        <span class="week-desc">Parcial Corte 2</span>
+                    </a>
+                    <a href="index.html">
+                        <span class="week-title">Semana 9</span>
+                        <span class="week-desc">Ejercicio practico Biografia</span>
+                    </a>
+                    <a href="Biografia_formulario.html">
+                        <span class="week-title">Semana 9</span>
+                        <span class="week-desc">Biografía con Formulario y Subida a la nube</span>
+                    </a>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="controlSemanas()">
+                <i class="ri-menu-line"></i> </a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Clase de Programación Web</h1>
+            <p>3wschool forms </p>
+            <div class="container">
+                <h1>HTML Forms</h1>
+                <p>
+                    En esta sesión aprendimos que los <strong>Formularios HTML5</strong> son la base de la interacción
+                    usuario-servidor.
+                    Usamos etiquetas como <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code> y
+                    <code>&lt;label&gt;</code> para crear interfaces de captura.
+                    Además, exploramos cómo la <strong>Subida a la Nube</strong> permite que nuestros proyectos sean
+                    accesibles globalmente a través de servidores remotos y se integran con github como vercel o digital
+                    ocean.
+                </p>
+                <p>Un formulario HTML se utiliza para recoger la entrada del usuario. La entrada del usuario se envía
+                    normalmente a un servidor para su procesamiento.</p>
+
+                <div class="code-box">
+                    <span class="tag-color">&lt;form&gt;</span><br>
+                    &nbsp;&nbsp;. . . <i>elementos del formulario</i> . . .<br>
+                    <span class="tag-color">&lt;/form&gt;</span>
+                </div>
+
+                <h2>El Elemento &lt;input&gt;</h2>
+                <p>El elemento <code>&lt;input&gt;</code> es el elemento de formulario más importante. Puede mostrarse
+                    de varias formas, dependiendo del atributo <code>type</code>.</p>
+
+                <table class="con_estilos_css">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;input type="text"&gt;</code></td>
+                            <td>Muestra un campo de entrada de texto de una sola línea.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;input type="radio"&gt;</code></td>
+                            <td>Muestra un botón de opción (para seleccionar una de muchas opciones).</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;input type="checkbox"&gt;</code></td>
+                            <td>Muestra una casilla de verificación (para seleccionar cero o más opciones).</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;input type="submit"&gt;</code></td>
+                            <td>Muestra un botón de envío (para enviar el formulario).</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;input type="button"&gt;</code></td>
+                            <td>Muestra un botón en el que se puede hacer clic.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Campos de Texto</h2>
+                <p>Define un campo de entrada de una sola línea para la entrada de texto:</p>
+                <div class="code-box">
+                    <span class="tag-color">&lt;label</span> <span class="attr-color">for</span>=<span
+                        class="val-color">"fname"</span><span class="tag-color">&gt;</span>First name:<span
+                        class="tag-color">&lt;/label&gt;</span><span class="tag-color">&lt;br&gt;</span><br>
+                    <span class="tag-color">&lt;input</span> <span class="attr-color">type</span>=<span
+                        class="val-color">"text"</span> <span class="attr-color">id</span>=<span
+                        class="val-color">"fname"</span> <span class="attr-color">name</span>=<span
+                        class="val-color">"fname"</span><span class="tag-color">&gt;</span>
+                </div>
+
+                <div class="note">
+                    <strong>Nota:</strong> El formulario en sí no es visible. Además, el ancho predeterminado de un
+                    campo de entrada es de 20 caracteres.
+                </div>
+
+                <h2>La Etiqueta &lt;label&gt;</h2>
+                <p>La etiqueta <code>&lt;label&gt;</code> define una etiqueta para muchos elementos de formulario.</p>
+                <p>Es útil para usuarios de lectores de pantalla y para usuarios que tienen dificultades para hacer clic
+                    en regiones pequeñas (como botones de radio o casillas de verificación).</p>
+
+                <h2>Botones de Radio</h2>
+                <p>Permiten al usuario seleccionar UNA de un número limitado de opciones:</p>
+                <div class="code-box">
+                    <span class="tag-color">&lt;input</span> <span class="attr-color">type</span>=<span
+                        class="val-color">"radio"</span> <span class="attr-color">id</span>=<span
+                        class="val-color">"html"</span> <span class="attr-color">name</span>=<span
+                        class="val-color">"fav_lang"</span> <span class="attr-color">value</span>=<span
+                        class="val-color">"HTML"</span><span class="tag-color">&gt;</span><br>
+                    <span class="tag-color">&lt;label</span> <span class="attr-color">for</span>=<span
+                        class="val-color">"html"</span><span class="tag-color">&gt;</span>HTML<span
+                        class="tag-color">&lt;/label&gt;</span>
+                </div>
+
+                <h2>El Botón de Envío (Submit)</h2>
+                <p>El <code>&lt;input type="submit"&gt;</code> define un botón para enviar los datos del formulario a un
+                    manejador de formularios (form-handler).</p>
+                <div class="code-box">
+                    <span class="tag-color">&lt;input</span> <span class="attr-color">type</span>=<span
+                        class="val-color">"submit"</span> <span class="attr-color">value</span>=<span
+                        class="val-color">"Submit"</span><span class="tag-color">&gt;</span>
+                </div>
+
+                <h2>Atributos de Formulario Necesarios</h2>
+                <table class="con_estilos_css">
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>target</b></td>
+                            <td>Especifica dónde mostrar la respuesta que se recibe después de enviar el formulario
+                                (<code>_blank, _self, _parent, _top</code>).</td>
+                        </tr>
+                        <tr>
+                            <td><b>action</b></td>
+                            <td>Define la acción que se realizará cuando se envíe el formulario.</td>
+                        </tr>
+                        <tr>
+                            <td><b>method</b></td>
+                            <td>Especifica el método HTTP (<b>GET</b> o <b>POST</b>) que se usará al enviar los datos.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>¡Importante!</strong> Si se omite el atributo <code>name</code> en un campo de entrada, los
+                    datos de ese campo no se enviarán en absoluto.
+                </div>
+            </div>
+
+            <hr>
+            <form onsubmit="funcionFormulario(this); return false;">
+                ingrese el codigo hexadecimal del color: <input type="text">
+                <input type="submit">
+            </form>
+            <hr>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-card">
+                <h3>Información de elaboración</h3>
+                <p><strong>Autor:</strong> Steven Andrés Moreno Meléndez</p>
+                <p><strong>Institución:</strong> Politécnico Internacional</p>
+                <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
+            </div>
+
+            <div class="footer-card">
+                <h3>Estado del Proyecto</h3>
+                <p>Ciclo 1 - Tecnología en Software</p>
+                <p>Estatus: <span class="status-pulse"></span> Optimización Visual</p>
+            </div>
+
+            <div class="footer-card">
+                <h3>Conéctate</h3>
+                <div class="social-links">
+                    <a href="https://github.com/tu-usuario" target="_blank" class="btn-social">
+                        <i class="ri-github-fill"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="btn-social">
+                        <i class="ri-linkedin-box-fill"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <hr>
+            <p>© 2026 Steven Moreno. Todos los derechos reservados. | Uso estrictamente académico.</p>
+        </div>
+        <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
+    </footer>
+    <script src="../../STATIC/JS/script.js"></script>
+</body>
+
+</html>

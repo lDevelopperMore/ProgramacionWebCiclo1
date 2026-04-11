@@ -1,8 +1,8 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <title>Hola mundo!</title>
+    <title> Biografia Tim Berners-Lee </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../STATIC/CSS/CSS_index/style.css">
@@ -21,11 +21,11 @@
             <div class="dropdown">
                 <button class="dropbtn" onclick="controlSemanas()">📚 Ver Semanas de Clase ▼</button>
                 <div class="dropdown-content">
-                    <a href="index.html">
+                    <a href="../Clase_01Semana/index.html">
                         <span class="week-title">Semana 1</span>
                         <span class="week-desc">¿Que es html? Versiones, Etiquetas y Estructura</span>
                     </a>
-                    <a href="biografia.html">
+                    <a href="../Clase_01Semana/biografia.html">
                         <span class="week-title">Semana 1</span>
                         <span class="week-desc">Ejercicio práctico: Biografía</span>
                     </a>
@@ -69,11 +69,11 @@
                         <span class="week-title">Semana 6</span>
                         <span class="week-desc">Biografía con Tablas y Marcos CSS</span>
                     </a>
-                    <a href="../Clase_07Semana/index.html">
+                    <a href="index.html">
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Maquetación y Navegación Desplegable</span>
                     </a>
-                    <a href="../Clase_07Semana/Biografia_Semana7.html">
+                    <a href="Biografia_Semana7.html">
                         <span class="week-title">Semana 7</span>
                         <span class="week-desc">Ejercicio práctico: Biografía con Maquetación y Navegación
                             Desplegable</span>
@@ -93,102 +93,82 @@
                 </div>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="controlSemanas()">
-                <i class="ri-menu-line"></i>
-            </a>
+                <i class="ri-menu-line"></i> </a>
         </nav>
     </header>
     <main>
         <section class="hero">
-            <h1>Clases Semana 1 ¿Que es html? ¿Que son Etiquetas vacias y semnanticas?</h1>
-            <h2>¿Que significa html?</h2>
-            <p> html significa hyper text markup language lenguaje de marcado de hipertexto
-                Hypertext hipertexto es la capacidad de saltar de una pagina a otra mediante links vinculos
-                Markup Marcado significa que no es un lenguaje de programacion puro como js y demas. sino un lenguaje
-                para usar etiquetas para marcar el contenido ejemplo etiquetar un titulo con h1 o un parrafo con p
-                lenguaje es el sistema de reglas que permite al navegador leer entiendan lo mismo </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/0xSPgPKJ7mo?si=L1eAvRlSXGaYphrH"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h2>¿Que versiones existen?</h2>
-            <p>Versiones
-                HTML 1 1991 Solo texto y enlaces.
-                HTML 2 1995 Nacen los formularios.
-                HTML 3.2 1997 Tablas y fotos.
-                HTML 4.01 1999 Llega el diseño con CSS.
-                HTML5 2014 Multimedia, Apps y Semántica.
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-iDc8s4EAvI?si=3TMNIhCRbdRN6IZM"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="topnav-ejercicio" id="ejercicioW3">
+                <a href="Biografia_Semana7.html" class="active">Biografia</a>
+                <a href="Proyectos_import.html">Proyectos importantes</a>
+                <a href="Cronologia_proye.html">Cronologia proyectos</a>
+                <a href="Tabla_Resumen_Proye.html">Tabla de proyectos</a>
+                <a href="Contactenos.html">Contactenos</a>
+                <a href="javascript:void(0);" class="icon" onclick="activarEjercicio()">
+                    <i class="ri-menu-line"></i>
+                </a>
+            </div>
+            <script>
+                function activarEjercicio() {
+                    // Buscamos el ID exacto que le pusiste al div: "ejercicioW3"
+                    var x = document.getElementById("ejercicioW3");
 
-            <h2>¿Cuales son sus estructuras bases?</h2>
-            <p>a maquetacion la estructura principal del lenguaje de etiquetas html se basa principalmente en
-                !DOCTYPE HTML , HTML, HEAD, TITLE, BODY, HEADER, MAIN, SECTION H1, P, FOOTER basicamente son esas pero
-                hay más.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Bi_yJ3hrXYw?si=WazOssoy6bm2hqXj"
+                    // Si la clase es la normal, le añadimos " responsive" (con el espacio)
+                    if (x.className === "topnav-ejercicio") {
+                        x.className += " responsive";
+                    } else {
+                        // Si ya la tiene, se la quitamos para cerrar el menú
+                        x.className = "topnav-ejercicio";
+                    }
+                }
+            </script>
+            <h1> Biografia de Tim Berners-Lee </h1>
+            <p> Tim Berners-Lee </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0jXO6M--lu0?si=XvlkGof0oayvBB4N"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h2>¿Quien invento html?</h2>
-            <p>Sir Tim Berners-Lee o hizo en 1989 (aunque la primera versión oficial salió en 1991) mientras trabajaba
-                en el
-                CERN (la Organización Europea para la Investigación Nuclear) en Suiza.
-                Tim Berners-Lee no solo creó el HTML, sino que inventó todo lo que hoy conocemos como la World Wide Web
-                (WWW).
-                Su problema era que los científicos del CERN tenían mucha información esparcida en diferentes
-                computadoras y no había
-                una forma fácil de compartirla. Para solucionar esto, él creó tres tecnologías fundamentales que aún
-                usamos hoy:
-                HTML: El lenguaje para escribir las páginas.
-                HTTP: El protocolo para enviar esas páginas de una PC a otra.
-                URL: La dirección para encontrar esas páginas.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SNw4m1m_2GE?si=xF_grU2u5gDfiy_Y"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h2>Dato curioso 1 ¿Sabias que?</h2>
-            <p>A diferencia de otros inventores que se hicieron multimillonarios cobrando por sus inventos, Tim
-                Berners-Lee decidió
-                que el HTML y la Web debían ser gratis para todo el mundo.</p>
-            <h2>Dato curioso 2 ¿Quién manda hoy en el HTML?</h2>
-            <p>Aunque Tim lo inventó, él ya no decide solo los cambios. Ahora existe una organización llamada W3C (World
-                Wide Web Consortium),
-                la cual él todavía dirige. Ellos son los que se ponen de acuerdo para decidir, por ejemplo, qué
-                etiquetas nuevas se agregan a HTML5</p>
-            <h2>Dato curioso 3 ¿Sabías que la primera página web de la historia todavía se puede visitar?</h2>
-            <p>la primera página web del mundo se publicó el 6 de agosto de 1991. Fue creada por Tim Berners-Lee y
-                servía para explicar, precisamente, qué era la World Wide Web.
+            <h3>Biografía de Sir Tim Berners-Lee: El Padre de la Web </h3>
+            <p>Sir Timothy "Tim" Berners-Lee es un científico de la computación británico, nacido el 8 de junio de 1955
+                en Londres. </p>
+            <p>mundialmente reconocido como el inventor de la World Wide Web (WWW), el sistema que permite navegar por
+                internet tal como lo conocemos hoy.</p>
+            <h3>Años y Formación</h3>
+            <p>Hijo de dos matemáticos que trabajaron en la Ferranti Mark I (una de las primeras computadoras), creció
+                en un ambiente de innovación tecnológica. Se graduó en
+                Física en el Queen's College de la Universidad de Oxford en 1976.
+                Durante su tiempo como estudiante,
+                fabricó su propia computadora utilizando piezas de repuesto y una televisión vieja.</p>
+            <h3>Desarrollo de la World Wide Web</h3>
+            <p>En 1980, mientras trabajaba como contratista en el CERN (Organización Europea para la Investigación
+                Nuclear), propuso un proyecto basado en el concepto de "hipertexto" para facilitar el intercambio y la
+                actualización de información
+                entre investigadores.
+                No fue hasta 1989 cuando unificó las ideas del hipertexto con el protocolo de comunicaciones de
+                Internet. Sus contribuciones fundamentales fueron:
+                HTML (HyperText Markup Language): El lenguaje de etiquetas para crear páginas.
+                HTTP (HyperText Transfer Protocol): El protocolo que permite la transferencia de datos.
+                URL (Uniform Resource Locator): El sistema de direcciones para localizar contenido.
+                En 1990, puso en funcionamiento el primer servidor y el primer navegador web de la historia en una
+                computadora NeXT.</p>
+            <h3>Un Legado Abierto</h3>
+            <p> Una de sus decisiones más trascendentales fue convencer al CERN de liberar el código fuente de la Web de
+                forma gratuita y sin patentes en 1993. Esta apertura permitió que la red creciera de forma exponencial y
+                global.</p>
+            <h3>Reconocimientos y Actualidad </h3>
+            <p>Por sus contribuciones, ha recibido numerosos honores:
+                Fue nombrado Caballero por la Reina Isabel II en 2004.
+                Recibió el Premio Turing en 2016 (considerado el Nobel de la informática).
+                Fundó el World Wide Web Consortium (W3C) en el MIT para supervisar el desarrollo de los estándares de la
+                red.
+                Actualmente, lidera iniciativas para proteger la privacidad de los usuarios y garantizar que la web siga
+                siendo un espacio libre, descentralizado y seguro para todos.</p>
 
-                1. El enlace real
-                Afortunadamente, el CERN la mantiene activa como una pieza de museo. Puedes verla aquí:
-                http://info.cern.ch/hypertext/WWW/TheProject.html</p>
-        </section>
-        <section class="hero">
-            <h1>Tarea ¿Que son las etiquetas vacias? y ¿Que son las etiquetas semanticas?</h1>
-            <h2>Etiquetas vacias</h2>
-            <p>Son las etiquetas que dictan una accion o insertan algo y no etiquetan algo como ejemplo
-                br, img, hr
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/gUDmL5jQYdk?si=Ud0PNFycu86XZdht"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h2>Etiquetas semanticas</h2>
-            <p>Son las etiquetas que etiquetan y categorizan datos son la base escencial de apertura del lenguaje de
-                marcado para la arquitectura del mismo
-                ejemplo
-            <nav class="topnav" id="navSemanas">, main footer</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TWdusPEUpfI?si=xmSbbrOBygYGhYMp"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <hr>
-                <form onsubmit="funcionFormulario(this); return false;">
-                    ingrese el codigo hexadecimal del color: <input type="text">
-                    <input type="submit">
-                </form>
+            <hr>
+            <form onsubmit="funcionFormulario(this); return false;">
+                ingrese el codigo hexadecimal del color: <input type="text">
+                <input type="submit">
+            </form>
         </section>
     </main>
     <footer>
