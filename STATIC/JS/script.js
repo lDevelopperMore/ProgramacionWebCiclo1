@@ -13,7 +13,7 @@ function controlSemanas() {
 /* LA FUNCIÓN QUE LE EDITARON Y SE DAÑÓ: */
 function funcionFormulario(elemento) {
     let color_bg = elemento.querySelector("input[type='text']").value;
-    document.querySelector("body").style.background = color_bg;
+    document.querySelector(".footer-card:nth-child(3)").style.background = color_bg;
 }
 const form = document.querySelector('form');
 form.addEventListener('submit', function (event) {

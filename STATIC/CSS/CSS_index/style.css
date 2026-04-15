@@ -291,6 +291,19 @@ footer {
     transform: translate(-5px, -5px);
     box-shadow: 10px 10px 0px 0px #1e293b;
 }
+.footer-card:hover {
+    background: #f8fafc;
+    border-color: #2563eb !important;
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0px 0px #1e293b;
+}
+/* EJERCICIO PUNTO 1 */
+.footer-card:nth-child(2):hover{
+        background: #f70505;
+        border-color: #a8e208 !important;
+        box-shadow: none;
+        transform: none;
+}
 
 .footer-card h3 {
     color: #1e293b;
@@ -583,11 +596,11 @@ footer {
 .hero table.con_estilos_css tr:nth-child(even) {
     background-color: #f8fafc;
 }
-
+/*ejercicio 2 */
 /* 5. Efecto Hover (Brillo al pasar el mouse) */
 .hero table.con_estilos_css tr:hover td {
     background-color: #e0e7ff;
-    cursor: pointer;
+    
 }
 
 /* =========================================
